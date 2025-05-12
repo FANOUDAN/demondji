@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Dèmondjitour</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">A Propos</a></li>
+            <li><a href="gallerie.html">Galerie</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+    </nav>
+    <div class="Voyage">
+        <div class="logo">
+
+            <p>Découverte du tourisme culturel en Afrique</p>
+        </div>
+
+    </div>
+
+
+
+
+    <style>
+        .globe-culturel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .categorie {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .categorie:hover {
+            transform: translateY(-10px);
+        }
+        
+        .categorie-titre {
+            background: var(--couleur-afrique);
+            color: white;
+            padding: 15px;
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .contenu-categorie {
+            padding: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .element-culture {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .element-culture:last-child {
+            border-bottom: none;
+        }
+        
+        .picto {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-color: var(--couleur-secondaire);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .globe-culturel {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+
+
+
+        <style>
+             :root {
+                --couleur-afrique: #e67e22;
+                --couleur-secondaire: #2c3e50;
+            }
+            
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+                color: #333;
+            }
+            
+            header {
+                color: white;
+                padding: 2rem;
+                text-align: center;
+            }
+            
+            .filtres {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                padding: 1rem;
+                background: #eee;
+                flex-wrap: wrap;
+            }
+            
+            .globe-culturel {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            
+            .categorie {
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                transition: transform 0.3s;
+            }
+            
+            .categorie:hover {
+                transform: translateY(-10px);
+            }
+            
+            .categorie-titre {
+                background: var(--couleur-afrique);
+                color: white;
+                padding: 15px;
+                margin: 0;
+                font-size: 1.3rem;
+            }
+            
+            .contenu-categorie {
+                padding: 15px;
+                max-height: 400px;
+                overflow-y: auto;
+            }
+            
+            .element-culture {
+                padding: 10px 0;
+                border-bottom: 1px dashed #eee;
+                display: flex;
+                align-items: center;
+            }
+            
+            .element-culture:last-child {
+                border-bottom: none;
+            }
+            
+            .picto {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+                background-color: var(--couleur-secondaire);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+            }
+            
+            .pays-tag {
+                display: inline-block;
+                background: #f1f1f1;
+                padding: 2px 8px;
+                border-radius: 12px;
+                font-size: 0.8rem;
+                margin-left: 8px;
+                color: var(--couleur-secondaire);
+            }
+            
+            @media (max-width: 768px) {
+                .globe-culturel {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+        </head>
+
+        <body>
+            <header>
+                <h1>Patrimoine Culturel Panafricain</h1>
+                <p>Découvrez la richesse culturelle des 54 pays africains</p>
+            </header>
+
+            <div class="filtres">
+                <button data-filtre="tous">Tous</button>
+                <button data-filtre="afrique-ouest">Afrique de l'Ouest</button>
+                <button data-filtre="afrique-est">Afrique de l'Est</button>
+                <button data-filtre="afrique-centrale">Afrique Centrale</button>
+                <button data-filtre="afrique-nord">Afrique du Nord</button>
+                <button data-filtre="afrique-australe">Afrique Australe</button>
+            </div>
+            <div class="globe-culturel">
+                <!-- Patrimoine UNESCO -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Patrimoine UNESCO</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture">
+                            <div class="picto">1</div>
+                            <span>Mosquées de Tombouctou (Mali)</span>
+                        </div>
+                        <div class="element-culture">
+                            <div class="picto">2</div>
+                            <span>Ruines de Loropéni (Burkina Faso)</span>
+                        </div>
+                        <!-- Ajoutez 30+ autres sites -->
+                    </div>
+                </div>
+
+                <!-- Festivals -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Festivals Majeurs</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture">
+                            <div class="picto">🎭</div>
+                            <span>Festival des Masques (Côte d'Ivoire)</span>
+                        </div>
+                        <div class="element-culture">
+                            <div class="picto">🎶</div>
+                            <span>Festival au Désert (Mali)</span>
+                        </div>
+                        <!-- Ajoutez 50+ autres festivals -->
+                    </div>
+                </div>
+
+                <!-- Traditions -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Traditions Vivantes</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture">
+                            <div class="picto">💃</div>
+                            <span>Danse Adumu (Masaï)</span>
+                        </div>
+                        <div class="element-culture">
+                            <div class="picto">🎨</div>
+                            <span>Peintures Ndebele (Afrique du Sud)</span>
+                        </div>
+                        <!-- Ajoutez 100+ autres traditions -->
+                    </div>
+                </div>
+
+                <!-- Cuisine -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Saveurs Culinaires</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture">
+                            <div class="picto">🍲</div>
+                            <span>Thiéboudienne (Sénégal)</span>
+                        </div>
+                        <div class="element-culture">
+                            <div class="picto">🍛</div>
+                            <span>Injera (Éthiopie)</span>
+                        </div>
+                        <!-- Ajoutez 50+ autres plats -->
+                    </div>
+                </div>
+
+                <!-- Art Contemporain -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Art Contemporain</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture">
+                            <div class="picto">🖼️</div>
+                            <span>Biennale de Dakar (Sénégal)</span>
+                        </div>
+                        <div class="element-culture">
+                            <div class="picto">🎭</div>
+                            <span>Afropolis (Afrique du Sud)</span>
+                        </div>
+                        <!-- Ajoutez 30+ autres événements -->
+                    </div>
+                </div>
+
+                <!-- Littérature -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Trésors Littéraires</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture">
+                            <div class="picto">📚</div>
+                            <span>Épopée de Soundjata (Mali)</span>
+                        </div>
+                        <div class="element-culture">
+                            <div class="picto">✍️</div>
+                            <span>Festival des Mots (Mali)</span>
+                        </div>
+                        <!-- Ajoutez 50+ autres références -->
+                    </div>
+                </div>
+            </div>
+            <div class="globe-culturel">
+                <!-- Patrimoine UNESCO -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Patrimoine UNESCO</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
+                            <div class="picto">1</div>
+                            <span>Mosquées de Tombouctou <span class="pays-tag">Mali</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="ethiopie" data-region="afrique-est">
+                            <div class="picto">2</div>
+                            <span>Églises rupestres de Lalibela <span class="pays-tag">Éthiopie</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="egypte" data-region="afrique-nord">
+                            <div class="picto">3</div>
+                            <span>Pyramides de Gizeh <span class="pays-tag">Égypte</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
+                            <div class="picto">4</div>
+                            <span>Île de Gorée <span class="pays-tag">Sénégal</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="zimbabwe" data-region="afrique-australe">
+                            <div class="picto">5</div>
+                            <span>Monument du Grand Zimbabwe <span class="pays-tag">Zimbabwe</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
+                            <div class="picto">6</div>
+                            <span>Médina de Fès <span class="pays-tag">Maroc</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="tanzanie" data-region="afrique-est">
+                            <div class="picto">7</div>
+                            <span>Zone de conservation de Ngorongoro <span class="pays-tag">Tanzanie</span></span>
+                        </div>
+                        <!-- Ajouter d'autres éléments pour tous les pays -->
+                    </div>
+                </div>
+
+                <!-- Festivals -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Festivals Majeurs</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture" data-pays="burkina" data-region="afrique-ouest">
+                            <div class="picto">🎭</div>
+                            <span>FESPACO (Cinéma) <span class="pays-tag">Burkina Faso</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
+                            <div class="picto">🎶</div>
+                            <span>Festival au Désert <span class="pays-tag">Mali</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="cotedivoire" data-region="afrique-ouest">
+                            <div class="picto">💃</div>
+                            <span>Fêtes des Masques <span class="pays-tag">Côte d'Ivoire</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="afriquedusud" data-region="afrique-australe">
+                            <div class="picto">🎨</div>
+                            <span>National Arts Festival <span class="pays-tag">Afrique du Sud</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
+                            <div class="picto">🎼</div>
+                            <span>Festival Gnaoua <span class="pays-tag">Maroc</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="tanzanie" data-region="afrique-est">
+                            <div class="picto">🎤</div>
+                            <span>Sauti za Busara <span class="pays-tag">Tanzanie</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="rwanda" data-region="afrique-est">
+                            <div class="picto">💃</div>
+                            <span>Kwita Izina (Célébration des gorilles) <span class="pays-tag">Rwanda</span></span>
+                        </div>
+                        <!-- Ajouter d'autres festivals pour tous les pays -->
+                    </div>
+                </div>
+
+                <!-- Traditions -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Traditions Vivantes</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture" data-pays="kenya" data-region="afrique-est">
+                            <div class="picto">💃</div>
+                            <span>Danse Adumu (Masaï) <span class="pays-tag">Kenya</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="afriquedusud" data-region="afrique-australe">
+                            <div class="picto">🎨</div>
+                            <span>Peintures Ndebele <span class="pays-tag">Afrique du Sud</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="benin" data-region="afrique-ouest">
+                            <div class="picto">👑</div>
+                            <span>Coutume Vodoun <span class="pays-tag">Bénin</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="ethiopie" data-region="afrique-est">
+                            <div class="picto">☕</div>
+                            <span>Cérémonie du café <span class="pays-tag">Éthiopie</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="botswana" data-region="afrique-australe">
+                            <div class="picto">🎵</div>
+                            <span>Musique San <span class="pays-tag">Botswana</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="algerie" data-region="afrique-nord">
+                            <div class="picto">🧶</div>
+                            <span>Tapisserie de Ghardaïa <span class="pays-tag">Algérie</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="cameroun" data-region="afrique-centrale">
+                            <div class="picto">🎭</div>
+                            <span>Ngondo (Cérémonie Sawa) <span class="pays-tag">Cameroun</span></span>
+                        </div>
+                        <!-- Ajouter d'autres traditions pour tous les pays -->
+                    </div>
+                </div>
+
+                <!-- Cuisine -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Saveurs Culinaires</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
+                            <div class="picto">🍲</div>
+                            <span>Thiéboudienne <span class="pays-tag">Sénégal</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="ethiopie" data-region="afrique-est">
+                            <div class="picto">🍛</div>
+                            <span>Injera <span class="pays-tag">Éthiopie</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
+                            <div class="picto">🥘</div>
+                            <span>Couscous <span class="pays-tag">Maroc</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="nigeria" data-region="afrique-ouest">
+                            <div class="picto">🍲</div>
+                            <span>Jollof Rice <span class="pays-tag">Nigeria</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="madagascar" data-region="afrique-est">
+                            <div class="picto">🍚</div>
+                            <span>Romazava <span class="pays-tag">Madagascar</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="tunisie" data-region="afrique-nord">
+                            <div class="picto">🥙</div>
+                            <span>Brik <span class="pays-tag">Tunisie</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="rdc" data-region="afrique-centrale">
+                            <div class="picto">🍖</div>
+                            <span>Moambe <span class="pays-tag">RDC</span></span>
+                        </div>
+                        <!-- Ajouter d'autres plats pour tous les pays -->
+                    </div>
+                </div>
+
+                <!-- Art Contemporain -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Art Contemporain</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
+                            <div class="picto">🖼️</div>
+                            <span>Biennale de Dakar <span class="pays-tag">Sénégal</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="afriquedusud" data-region="afrique-australe">
+                            <div class="picto">🎭</div>
+                            <span>Afropolis <span class="pays-tag">Afrique du Sud</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="nigeria" data-region="afrique-ouest">
+                            <div class="picto">🖌️</div>
+                            <span>Art X Lagos <span class="pays-tag">Nigeria</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
+                            <div class="picto">🏺</div>
+                            <span>Marrakech Biennale <span class="pays-tag">Maroc</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="kenya" data-region="afrique-est">
+                            <div class="picto">🎨</div>
+                            <span>Nairobi Contemporary Art Institute <span class="pays-tag">Kenya</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="angola" data-region="afrique-australe">
+                            <div class="picto">📷</div>
+                            <span>Triennale de Luanda <span class="pays-tag">Angola</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="cotedivoire" data-region="afrique-ouest">
+                            <div class="picto">🏛️</div>
+                            <span>Musée des Civilisations Noires <span class="pays-tag">Côte d'Ivoire</span></span>
+                        </div>
+                        <!-- Ajouter d'autres événements artistiques pour tous les pays -->
+                    </div>
+                </div>
+
+                <!-- Littérature -->
+                <div class="categorie">
+                    <h2 class="categorie-titre">Trésors Littéraires</h2>
+                    <div class="contenu-categorie">
+                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
+                            <div class="picto">📚</div>
+                            <span>Épopée de Soundjata <span class="pays-tag">Mali</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
+                            <div class="picto">✍️</div>
+                            <span>Festival des Mots <span class="pays-tag">Mali</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="nigeria" data-region="afrique-ouest">
+                            <div class="picto">🖋️</div>
+                            <span>Chinua Achebe (Écrivain) <span class="pays-tag">Nigeria</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
+                            <div class="picto">📖</div>
+                            <span>Léopold Sédar Senghor <span class="pays-tag">Sénégal</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="algerie" data-region="afrique-nord">
+                            <div class="picto">✒️</div>
+                            <span>Albert Camus <span class="pays-tag">Algérie</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="kenya" data-region="afrique-est">
+                            <div class="picto">📓</div>
+                            <span>Ngũgĩ wa Thiong'o <span class="pays-tag">Kenya</span></span>
+                        </div>
+                        <div class="element-culture" data-pays="egypte" data-region="afrique-nord">
+                            <div class="picto">📜</div>
+                            <span>Naguib Mahfouz <span class="pays-tag">Égypte</span></span>
+                        </div>
+                        <!-- Ajouter d'autres références littéraires pour tous les pays -->
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Script pour le filtrage par région
+                document.querySelectorAll('.filtres button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const region = button.dataset.filtre;
+
+                        document.querySelectorAll('.element-culture').forEach(element => {
+                            if (region === 'tous' || element.dataset.region === region) {
+                                element.style.display = 'flex';
+                            } else {
+                                element.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            </script>
+        </body>
+
+</html>
+</body>
+
+</html>
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <h3>Liens Utiles</h3>
+            <ul>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h3>Suivez-nous</h3>
+            <ul>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://t.me/demondjitourBenin">Télégram</a></li>
+                <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag  ">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="Email : demondjil@gmail.com">Email : demondjil@gmail.com</a></li>
+                <li>
+                    <a href="+229 01 96 73 12 33">+229 01 96 73 12 33</a>
+                </li>
+                <li>
+                    <a href="+229 01 95 24 88 33">+229 01 95 24 88 33</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Votre Site Touristique. Tous droits réservés.</p>
+    </div>
+</footer>

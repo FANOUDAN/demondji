@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+
+
+    </body>
+
+</html>
+
+<nav class="navbar">
+    <h1>Dèmondjitour</h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Apropos.html">A Propos</a></li>
+        <li><a href="gallerie.html">Galerie</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+
+</nav>
+<h1>Nos contact</h1>
+<div class="contact-grid">
+    <div class="contact-item">
+
+        <img src="ae2d8f7f-f20b-4ca7-bfa5-15c8b946d4ec.jpeg" alt="localisation">
+
+
+        <p><a href="+229 01 96 73 12 33">+229 01 96 73 12 33</a></p> &
+        <p><a href="+229 01 95 24 88 33">+229 01 95 24 88 33</a></p> <br><br>
+        <img src="52774b8a-d925-4a4f-a868-f9aab80f0229.jpeg" alt="Email">
+        <p><a href="demondjil@gmail.com">demondjil@gmail.com</a></p> <br>
+
+
+
+        <div class="contact-item">
+            <h3>Ma carte</h3>
+            <p>Arrondissement de Dahè commune de HOUEYOGBE</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.123456789012!2d1.7890123!3d6.6543210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDah%C3%A8%2C%20Hou%C3%A9yogb%C3%A9%2C%20B%C3%A9nin!5e0!3m2!1sfr!2sfr!4v1234567890!5m2!1sfr!2sfr"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">  
+</iframe><br><br>
+
+        </div>
+
+
+    </div>
+    <div class="contact-item">
+        <div class="container">
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom complet*</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse email*</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="votre@email.com" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone*</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Votre numéro de téléphone" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destination souhaitée*</label>
+                    <select id="destination" name="destination" class="form-control" required>
+                        <option value="">-- Sélectionnez une destination --</option>
+                        <option value="benin">Bénin</option>
+                        <option value="togo">Togo</option>
+                        <option value="cote-ivoire">Côte d'Ivoire</option>
+                        <option value="senegal">Sénégal</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="niger">Niger</option>
+                        <option value="mali">Mali</option>
+                        <option value="burkina">Burkina Faso</option>
+                        <option value="cameroun">Cameroun</option>
+                        <option value="gabon">Gabon</option>
+                        <option value="rdc">République Démocratique du Congo</option>
+                        <option value="afrique-sud">Afrique du Sud</option>
+                        <option value="maroc">Maroc</option>
+                        <option value="tunisie">Tunisie</option>
+                        <option value="algerie">Algérie</option>
+                        <option value="europe">Europe</option>
+                        <option value="asie">Asie</option>
+                        <option value="amerique">Amérique</option>
+                        <option value="autres">Autres destinations</option>
+                    </select>
+                    <!-- autres options -->
+
+                    <span class="error-message" id="destination-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Dates de voyage souhaitées</label>
+                    <input type="text" id="date" name="date" class="form-control" placeholder="JJ/MM/AAAA - JJ/MM/AAAA">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message*</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Décrivez-nous votre projet de voyage..." required></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+
+                <a href="#" id="telegramLink" class="submit-btn">Envoyer votre demande</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const telegramLink = document.getElementById('telegramLink');
+
+            telegramLink.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+
+                // Valider chaque champ requis
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        const errorId = field.id + '-error';
+                        const errorElement = document.getElementById(errorId);
+                        if (errorElement) {
+                            errorElement.textContent = 'Ce champ est obligatoire';
+                        }
+                        field.classList.add('error');
+                    } else {
+                        const errorId = field.id + '-error';
+                        const errorElement = document.getElementById(errorId);
+                        if (errorElement) {
+                            errorElement.textContent = '';
+                        }
+                        field.classList.remove('error');
+                    }
+                });
+
+                // Validation spécifique pour l'email
+                const emailField = document.getElementById('email');
+                if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+                    isValid = false;
+                    document.getElementById('email-error').textContent = 'Veuillez entrer une adresse email valide';
+                    emailField.classList.add('error');
+                }
+
+                if (isValid) {
+                    // Récupérer les valeurs du formulaire
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const destination = document.getElementById('destination').value;
+                    const date = document.getElementById('date').value;
+                    const message = document.getElementById('message').value;
+
+                    // Créer le message pour Telegram
+                    const telegramMessage = `Nouvelle demande de contact:%0A%0A` +
+                        `Nom: ${encodeURIComponent(name)}%0A` +
+                        `Email: ${encodeURIComponent(email)}%0A` +
+                        `Téléphone: ${encodeURIComponent(phone)}%0A` +
+                        `Destination: ${encodeURIComponent(destination)}%0A` +
+                        `Dates: ${encodeURIComponent(date)}%0A` +
+                        `Message: ${encodeURIComponent(message)}`;
+
+                    // Ouvrir le lien Telegram avec le message pré-rempli
+                    window.open(`https://t.me/demondjitourBenin?text=${telegramMessage}`, '_blank');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .error {
+            border-color: #ff0000 !important;
+        }
+        
+        .error-message {
+            color: #ff0000;
+            font-size: 0.8em;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .submit-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0088cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .submit-btn:hover {
+            background-color: #006699;
+        }
+    </style>
+
+    </form>
+</div>
+</div>
+
+<style>
+    .error-message {
+        color: #e74c3c;
+        font-size: 0.8em;
+        display: none;
+    }
+    
+    .form-control.error {
+        border-color: #e74c3c;
+    }
+    
+    .submit-btn {
+        background-color: beige;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: background-color 0.3s;
+    }
+    
+    .submit-btn:hover {
+        background-color: bisque;
+    }
+    
+    .submit-btn i {
+        font-size: 1.2em;
+    }
+</style>
+
+
+
+</div>
+</div>
+
+
+
+
+</div>
+<br>
+<footer>
+    <div class="footer-container ">
+        <div class="footer-links ">
+            <h3>Liens Utiles</h3>
+            <ul>
+                <li><a href="#destinations ">Destinations</a></li>
+                <li><a href="#experiences ">Expériences</a></li>
+                <li><a href="#contact ">Contact</a></li>
+                <li><a href="#blog ">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-social ">
+            <h3>Suivez-nous</h3>
+            <ul>
+                <li><a href="https://facebook.com ">Facebook</a></li>
+                <li><a href="https://t.me/demondjitourBenin">Télégram</a></li>
+                <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag  ">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact ">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="Email : demondjil@gmail.com ">Email : demondjil@gmail.com</a></li>
+                <li>
+                    <a href="+229 01 96 73 12 33 ">+229 01 96 73 12 33</a>
+                </li>
+                <li>
+                    <a href="+229 01 95 24 88 33 ">+229 01 95 24 88 33</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom ">
+        <p>&copy; 2025 Votre Site Touristique. Tous droits réservés.</p>
+    </div>
+</footer>
+
+</body>
+
+</html>

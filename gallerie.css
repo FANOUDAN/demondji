@@ -1,0 +1,392 @@
+* {
+    padding: auto;
+    font-weight: bold;
+    margin: 0;
+}
+
+body {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDown 1.5s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.114) 30%, rgba(0, 0, 0, 0.164) 30%), url(afrique\ carte.jpg), no-repeat;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #E6E6FA;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.opacity {
+    width: 38%;
+    background-color: rgba(0, 0, 0, 0.259);
+    opacity: 0;
+    position: absolute;
+    transition: 0.2s;
+    margin-top: -1px;
+    margin-left: -5px;
+    cursor: pointer;
+}
+
+.contact-item:hover .opacity {
+    opacity: 1;
+    transition: 0.6s;
+    padding: 26%;
+    animation: glisse 1s ease;
+}
+
+@keyframes glisse {
+    0% {
+        transform: scale(0.1);
+    }
+}
+
+.contact-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.contact-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: #0A22F3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.contact-item a:hover {
+    color: #0A22F3;
+}
+
+.contact-item img {
+    width: 30%;
+    height: 40%;
+    margin-bottom: 15px;
+}
+
+b {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+}
+
+.navsav a {
+    background-color: yellowgreen;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navsav {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 10%;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+    /* Empêche que les éléments deviennent trop petits */
+}
+
+.footer-links,
+.footer-social,
+.footer-contact {
+    padding: 10px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer bottom */
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* Styles pour les écrans plus petits */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Empile les éléments au lieu de les disposer en ligne */
+        align-items: center;
+        text-align: center;
+    }
+    .footer-container div {
+        min-width: auto;
+        /* Permet aux sections de s'adapter à la largeur */
+    }
+    .footer-bottom {
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+    footer h3 {
+        font-size: 1.2rem;
+    }
+    footer ul li a {
+        font-size: 0.9rem;
+        /* Réduit la taille de la police pour les petits écrans */
+    }
+}
+
+
+/* Styles pour les très petits écrans (mobiles) */
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 20px;
+    }
+    footer h3 {
+        font-size: 1.1rem;
+    }
+    footer ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.388);
+    border-bottom: 1px solid white;
+    position: sticky;
+    top: -3px;
+}
+
+navbar h1 {
+    font-size: 1rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+
+/* Styles pour les très petits écrans (mobiles) */
+
+@media (max-width: 480px) {
+    #menu-toggle {
+        display: none;
+        position: absolute;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.388);
+        border-bottom: 1px solid white;
+        position: sticky;
+        top: -3px;
+    }
+    navbar h1 {
+        font-size: 1rem;
+    }
+    .menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    .menu li {
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    .menu a {
+        text-decoration: none;
+        margin: 0px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        color: white;
+    }
+    #menu-toggle {
+        display: none;
+    }
+    .menu-icon {
+        display: none;
+        font-size: 70px;
+        cursor: pointer;
+    }
+    .footer-container {
+        padding: 20px;
+    }
+    footer h3 {
+        font-size: 1.1rem;
+    }
+    footer ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes slideln {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.contact-item {
+    animation: slideln 0.9s ease forwards;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        width: 50%;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menu-toggle:checked~.menu {
+        display: flex;
+    }
+    .menu li a {
+        padding: 10px;
+        display: block;
+    }
+}
