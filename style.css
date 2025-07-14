@@ -283,7 +283,6 @@ h2 {
 
 .hero-scroll {
     position: absolute;
-    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
