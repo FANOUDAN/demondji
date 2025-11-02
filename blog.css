@@ -112,7 +112,59 @@ navbar h1 {
     font-family: 'roboto', serif;
     font-size: 1.3rem;
 }
+    .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.menu > li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    padding: 10px 15px;
+    
+    color: #fff;
+    font-weight: 500;
+}
+
+.menu > li > a:hover {
+    background-color: #817d7d1f;
+}
+
+.sousmenu {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.sousmenu li a {
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    color: black;
+}
+
+.sousmenu li a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/* Affichage du sous-menu au survol */
+.menu-hover:hover .sousmenu {
+  display: block;
+}
 @media (max-width: 768px) {
     /* Le logo sera toujours à gauche, mais on change la disposition du menu */
     .Voyage {
