@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Culturel - Dèmondjitour</title>
+    <link rel="stylesheet" href="album.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGMSHGQX7Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-HGMSHGQX7Q');
+    </script>
+
+    <meta name="description" content="Plongez au cœur de l'Afrique culturelle : traditions, festivals, sites historiques, artisanat et peuples authentiques. ExploreAfrique vous guide à travers les richesses du continent.">
+    <meta name="keywords" content="tourisme Afrique, culture africaine, voyage, traditions, artisanat, festivals, patrimoine">
+    <meta name="author" content="ExploreAfrique">
+
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="ExploreAfrique - Le tourisme culturel en Afrique">
+    <meta property="og:description" content="Découvrez les trésors culturels africains : musiques, arts, traditions, et peuples fascinants.">
+    <meta property="og:image" content="https://exploreafrique.com/assets/images/og-preview.jpg">
+    <meta property="og:url" content="https://exploreafrique.com">
+    <meta property="og:type" content="website">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>/* album.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDown 1.5s ease-out forwards;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.114) 30%, rgba(0, 0, 0, 0.164) 30%), url('afrique carte.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #E6E6FA;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li {
+    text-decoration: none;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #e67e22;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* TEXTE DE PRÉSENTATION ÉLÉGANT */
+.album-presentation {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.album-presentation h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5em;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: #E6E6FA;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.album-presentation .subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.6em;
+    color: #F0F0F0;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.album-presentation .description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: #DCDCDC;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Sections générales */
+section {
+    padding: 80px 20px;
+    margin: 40px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.8em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #E6E6FA;
+    letter-spacing: 2px;
+}
+
+.section-header p {
+    font-size: 1.2em;
+    color: #DCDCDC;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Carrousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 25px;
+    padding: 0 40px;
+}
+
+/* Cartes de destination */
+.destination-card {
+    flex: 0 0 380px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+}
+
+.destination-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.destination-image {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.1);
+}
+
+.destination-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover .destination-overlay {
+    transform: translateY(0);
+}
+
+.destination-content {
+    padding: 25px;
+}
+
+.destination-content h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.destination-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.destination-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #e67e22;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.destination-btn:hover {
+    background: #d35400;
+    transform: translateX(5px);
+    gap: 15px;
+}
+
+/* Navigation des carrousels */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    background: rgba(230, 126, 34, 0.9);
+    border: none;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:hover {
+    background: #d35400;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Indicateurs */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator.active {
+    background: #e67e22;
+    transform: scale(1.2);
+    border-color: white;
+}
+
+/* SECTION GALERIE AMÉLIORÉE */
+.gallery-section {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1400px;
+}
+
+.gallery-container {
+    padding: 0 20px;
+}
+
+/* Grille de galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    background: white;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-type {
+    display: inline-block;
+    background: #e67e22;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.gallery-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.gallery-location {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* Indicateur vidéo */
+.video-indicator {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Section Statistiques */
+.stats-section {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 60px 20px;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+    color: white;
+}
+
+.stat-number {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #e67e22;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+.stat-label {
+    font-size: 1.2em;
+    color: #DCDCDC;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 60px 10% 0;
+    text-align: left;
+    margin-top: 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-links,
+.footer-social,
+.footer-contact {
+    padding: 10px;
+}
+
+footer h3 {
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    color: #e67e22;
+    font-weight: 600;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 15px;
+}
+
+footer ul li a {
+    color: #DCDCDC;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+footer ul li a:hover {
+    color: #e67e22;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    background-color: rgba(34, 34, 34, 0.9);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .carousel-track {
+        padding: 0 30px;
+    }
+    
+    .destination-card {
+        flex: 0 0 340px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+    
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+    
+    .menu li a {
+        padding: 15px;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .album-presentation {
+        padding: 50px 15px;
+        margin: 15px;
+    }
+    
+    .album-presentation h1 {
+        font-size: 2.2em;
+    }
+    
+    .album-presentation .subtitle {
+        font-size: 1.2em;
+    }
+    
+    .album-presentation .description {
+        font-size: 1em;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2em;
+    }
+    
+    .carousel-track {
+        padding: 0 20px;
+        gap: 20px;
+    }
+    
+    .destination-card {
+        flex: 0 0 300px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .stat-number {
+        font-size: 2.8em;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.4rem;
+    }
+    
+    .album-presentation h1 {
+        font-size: 1.8em;
+    }
+    
+    .album-presentation .subtitle {
+        font-size: 1em;
+    }
+    
+    .album-presentation .description {
+        font-size: 0.9em;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8em;
+    }
+    
+    .destination-card {
+        flex: 0 0 280px;
+    }
+    
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .stat-number {
+        font-size: 2.5em;
+    }
+}</style>
+<body>
+    <nav class="navbar">
+        <h1>Dèmondjitour</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">A Propos</a></li>
+            <li><a href="gallerie.html">Galerie</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- TEXTE DE PRÉSENTATION ÉLÉGANT -->
+    <div class="album-presentation">
+        <h1>Voyage à travers les Cultures Africaines</h1>
+        <div class="subtitle">Découvrez la richesse et la diversité du patrimoine africain</div>
+        <div class="description">
+            Plongez dans un voyage sensoriel au cœur des traditions ancestrales, des paysages époustouflants 
+            et des peuples authentiques. Notre album vous invite à explorer les trésors cachés de l'Afrique, 
+            où chaque destination raconte une histoire unique, chaque culture dévoile sa magie, et chaque 
+            rencontre transforme votre perception du continent.
+        </div>
+    </div>
+
+    <!-- SECTION DESTINATIONS AVEC CARROUSEL HORIZONTAL -->
+    <section class="destinations-section">
+        <div class="section-header">
+            <h2>Nos Destinations Phares</h2>
+            <p>Découvrez les merveilles culturelles de l'Afrique à travers nos destinations sélectionnées</p>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Les éléments du carrousel seront générés par JavaScript -->
+            </div>
+            
+            <div class="carousel-nav">
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="carousel-indicators" id="indicators">
+                <!-- Les indicateurs seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION GALERIE MIXTE (IMAGES ET VIDÉOS) -->
+    <section class="gallery-section">
+        <div class="section-header">
+            <h2>Expériences Immersives</h2>
+            <p>Photos et vidéos qui racontent l'authenticité africaine</p>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Les éléments de la galerie seront générés par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION STATISTIQUES -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label">Destinations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="1000">0</div>
+                <div class="stat-label">Voyageurs Satisfaits</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">Années d'Expérience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="24">0</div>
+                <div class="stat-label">Pays Visités</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Apropos.html">À Propos</a></li>
+                    <li><a href="gallerie.html">Galerie</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://t.me/demondjitourBenin"><i class="fab fa-telegram"></i> Télégram</a></li>
+                    <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:demondjil@gmail.com"><i class="fas fa-envelope"></i> demondjil@gmail.com</a></li>
+                    <li><a href="tel:+2290196731233"><i class="fas fa-phone"></i> +229 01 96 73 12 33</a></li>
+                    <li><a href="tel:+2290195248833"><i class="fas fa-phone"></i> +229 01 95 24 88 33</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dèmondjitour. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>// album.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Données des destinations
+    const destinations = [
+        {
+            id: 1,
+            title: "Mauritanie Authentique",
+            description: "Découvrez les paysages désertiques uniques et la culture nomade",
+            image: "ChatGPT Image 14 oct. 2025, 12_57_12.png",
+            link: "mauritanie.html"
+        },
+        {
+            id: 2,
+            title: "Sénégal Traditionnel",
+            description: "Immersion dans la culture vibrante et les traditions ancestrales",
+            image: "ChatGPT Image 15 oct. 2025, 00_05_52.png",
+            link: "senegal.html"
+        },
+        {
+            id: 3,
+            title: "Kenya Sauvage",
+            description: "Safaris inoubliables au cœur de la faune africaine",
+            image: "ChatGPT Image 15 oct. 2025, 00_11_46.png",
+            link: "kenya.html"
+        },
+        {
+            id: 4,
+            title: "Afrique du Sud",
+            description: "Entre modernité et traditions, une expérience unique",
+            image: "ChatGPT Image 17 oct. 2025, 08_31_43.png",
+            link: "afrique-sud.html"
+        },
+        {
+            id: 5,
+            title: "Bénin Culturel",
+            description: "À la découverte du berceau du Vodoun et des royaumes anciens",
+            image: "c:\\Users\\FANOUDAN Spéra\\Downloads\\cdd09c10-13f8-416b-984e-ff9b52b736ab.jpg",
+            link: "benin.html"
+        },
+        {
+            id: 6,
+            title: "Maroc Impérial",
+            description: "Voyage à travers les cités impériales et le désert",
+            image: "ChatGPT Image 14 oct. 2025, 12_57_12.png",
+            link: "maroc.html"
+        }
+    ];
+
+    // Données de la galerie mixte (images et vidéos)
+    const galleryItems = [
+        {
+            type: "image",
+            src: "ChatGPT Image 14 oct. 2025, 12_57_12.png",
+            title: "Désert Mauritanien",
+            location: "Mauritanie",
+            description: "Paysage époustouflant du désert"
+        },
+        {
+            type: "video",
+            src: "WhatsApp Vidéo 2025-10-11 à 07.47.33_17f7377b.mp4",
+            title: "Cérémonie Traditionnelle",
+            location: "Bénin",
+            description: "Rituel culturel authentique"
+        },
+        {
+            type: "image",
+            src: "ChatGPT Image 15 oct. 2025, 00_05_52.png",
+            title: "Village Sénégalais",
+            location: "Sénégal",
+            description: "Vie quotidienne dans un village traditionnel"
+        },
+        {
+            type: "image",
+            src: "ChatGPT Image 15 oct. 2025, 00_11_46.png",
+            title: "Safari Kenyan",
+            location: "Kenya",
+            description: "Rencontre avec la faune sauvage"
+        },
+        {
+            type: "image",
+            src: "ChatGPT Image 17 oct. 2025, 08_31_43.png",
+            title: "Paysage Sud-Africain",
+            location: "Afrique du Sud",
+            description: "Vignobles et montagnes"
+        },
+        {
+            type: "image",
+            src: "c:\\Users\\FANOUDAN Spéra\\Downloads\\cdd09c10-13f8-416b-984e-ff9b52b736ab.jpg",
+            title: "Artisanat Local",
+            location: "Bénin",
+            description: "Artisanat traditionnel africain"
+        }
+    ];
+
+    // Éléments DOM
+    const carouselTrack = document.getElementById('carouselTrack');
+    const galleryGrid = document.getElementById('galleryGrid');
+    const indicatorsContainer = document.getElementById('indicators');
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    // Variables pour le suivi
+    let currentDestinationIndex = 0;
+
+    // Initialisation
+    initializeCarousels();
+    initializeGallery();
+    initializeStats();
+
+    // Fonctions d'initialisation
+    function initializeCarousels() {
+        createDestinationCards();
+        createIndicators();
+        updateCarouselPosition();
+    }
+
+    function initializeGallery() {
+        createGalleryItems();
+    }
+
+    function createDestinationCards() {
+        carouselTrack.innerHTML = '';
+        destinations.forEach(destination => {
+            const card = document.createElement('div');
+            card.className = 'destination-card';
+            card.innerHTML = `
+                <div class="destination-image">
+                    <img src="${destination.image}" alt="${destination.title}" onerror="this.src='placeholder.jpg'">
+                    <div class="destination-overlay">
+                        <a href="${destination.link}" class="destination-btn">
+                            Découvrir <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="destination-content">
+                    <h3>${destination.title}</h3>
+                    <p>${destination.description}</p>
+                </div>
+            `;
+            carouselTrack.appendChild(card);
+        });
+    }
+
+    function createGalleryItems() {
+        galleryGrid.innerHTML = '';
+        galleryItems.forEach((item, index) => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            
+            let mediaElement = '';
+            if (item.type === 'video') {
+                mediaElement = `
+                    <video controls>
+                        <source src="${item.src}" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéo.
+                    </video>
+                    <div class="video-indicator">
+                        <i class="fas fa-play"></i> Vidéo
+                    </div>
+                `;
+            } else {
+                mediaElement = `<img src="${item.src}" alt="${item.title}" onerror="this.src='placeholder.jpg'">`;
+            }
+            
+            galleryItem.innerHTML = `
+                ${mediaElement}
+                <div class="gallery-overlay">
+                    <span class="gallery-type">${item.type === 'video' ? 'Vidéo' : 'Photo'}</span>
+                    <div class="gallery-title">${item.title}</div>
+                    <div class="gallery-location">${item.location}</div>
+                </div>
+            `;
+            galleryGrid.appendChild(galleryItem);
+        });
+    }
+
+    function createIndicators() {
+        indicatorsContainer.innerHTML = '';
+        const totalSlides = Math.ceil(destinations.length / getVisibleCards());
+        
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('span');
+            indicator.className = `indicator ${i === 0 ? 'active' : ''}`;
+            indicator.addEventListener('click', () => {
+                currentDestinationIndex = i * getVisibleCards();
+                updateCarouselPosition();
+            });
+            indicatorsContainer.appendChild(indicator);
+        }
+    }
+
+    function initializeStats() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'));
+            const duration = 2000; // 2 secondes
+            const step = target / (duration / 16); // 60fps
+            
+            let current = 0;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                stat.textContent = Math.floor(current);
+            }, 16);
+        });
+    }
+
+    // Fonctions de navigation
+    function updateCarouselPosition() {
+        const cardWidth = document.querySelector('.destination-card').offsetWidth + 25;
+        carouselTrack.style.transform = `translateX(-${currentDestinationIndex * cardWidth}px)`;
+        
+        // Mettre à jour les indicateurs
+        const activeIndicator = Math.floor(currentDestinationIndex / getVisibleCards());
+        document.querySelectorAll('.indicator').forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === activeIndicator);
+        });
+    }
+
+    function nextDestination() {
+        const maxIndex = destinations.length - getVisibleCards();
+        if (currentDestinationIndex < maxIndex) {
+            currentDestinationIndex++;
+            updateCarouselPosition();
+        }
+    }
+
+    function prevDestination() {
+        if (currentDestinationIndex > 0) {
+            currentDestinationIndex--;
+            updateCarouselPosition();
+        }
+    }
+
+    // Calcul du nombre d'éléments visibles
+    function getVisibleCards() {
+        const containerWidth = carouselTrack.offsetWidth;
+        const cardWidth = document.querySelector('.destination-card').offsetWidth + 25;
+        return Math.floor(containerWidth / cardWidth);
+    }
+
+    // Événements
+    prevBtn.addEventListener('click', prevDestination);
+    nextBtn.addEventListener('click', nextDestination);
+
+    // Redimensionnement de la fenêtre
+    window.addEventListener('resize', () => {
+        updateCarouselPosition();
+        createIndicators();
+    });
+
+    // Auto-play pour le carrousel
+    setInterval(nextDestination, 5000);
+});</script>
+</body>
+
+</html>

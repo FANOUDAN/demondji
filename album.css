@@ -1,388 +1,650 @@
-
-
-        * {
-            padding: auto;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        body {
-            opacity: 0;
-            transform: translateY(-50px);
-            animation: fadeInDown 1.5s ease-out forwards;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        body {
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.114) 30%, rgba(0, 0, 0, 0.164) 30%), url(afrique\ carte.jpg), no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        /* TEXTE DE PRÉSENTATION ÉLÉGANT */
-        .album-presentation {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(0, 0, 0, 0.6);
-            margin: 20px auto;
-            max-width: 1200px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .album-presentation h1 {
-            font-family: 'Georgia', serif;
-            font-size: 3em;
-            font-weight: 300;
-            margin-bottom: 20px;
-            color: #E6E6FA;
-            letter-spacing: 2px;
-        }
-
-        .album-presentation .subtitle {
-            font-family: 'Arial', sans-serif;
-            font-size: 1.4em;
-            color: #F0F0F0;
-            margin-bottom: 25px;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-
-        .album-presentation .description {
-            font-family: 'Arial', sans-serif;
-            font-size: 1.1em;
-            color: #DCDCDC;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
-        h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #E6E6FA;
-            text-align: center;
-        }
-
-        h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.2em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: whitesmoke;
-            text-align: center;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-       .contact-item {
-    position: relative;
-    overflow: hidden;
+/* album.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: bold;
 }
 
-.opacity {
+body {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInDown 1.5s ease-out forwards;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.114) 30%, rgba(0, 0, 0, 0.164) 30%), url('afrique carte.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #E6E6FA;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li {
+    text-decoration: none;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #e67e22;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* TEXTE DE PRÉSENTATION ÉLÉGANT */
+.album-presentation {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.album-presentation h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5em;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: #E6E6FA;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.album-presentation .subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.6em;
+    color: #F0F0F0;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.album-presentation .description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: #DCDCDC;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Sections générales */
+section {
+    padding: 80px 20px;
+    margin: 40px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.8em;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #E6E6FA;
+    letter-spacing: 2px;
+}
+
+.section-header p {
+    font-size: 1.2em;
+    color: #DCDCDC;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Carrousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 25px;
+    padding: 0 40px;
+}
+
+/* Cartes de destination */
+.destination-card {
+    flex: 0 0 380px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+}
+
+.destination-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.destination-image {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.1);
+}
+
+.destination-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover .destination-overlay {
+    transform: translateY(0);
+}
+
+.destination-content {
+    padding: 25px;
+}
+
+.destination-content h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.destination-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.destination-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #e67e22;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.destination-btn:hover {
+    background: #d35400;
+    transform: translateX(5px);
+    gap: 15px;
+}
+
+/* Navigation des carrousels */
+.carousel-nav,
+.gallery-nav,
+.testimonials-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    background: rgba(230, 126, 34, 0.9);
+    border: none;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:hover {
+    background: #d35400;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Indicateurs */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator.active {
+    background: #e67e22;
+    transform: scale(1.2);
+    border-color: white;
+}
+
+/* Galerie */
+.gallery-carousel,
+.testimonials-carousel {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+}
+
+.gallery-track,
+.testimonials-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 25px;
+    padding: 0 40px;
+}
+
+.gallery-item {
+    flex: 0 0 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
     width: 100%;
-    height: 40%; /* taille de l'effet */
-    background-color: rgba(0, 0, 0, 0.4);
-    transform: scaleY(0);       
-    transform-origin: bottom;      /* IMPORTANT -> commence du HAUT */
-    transition: transform 0.5s ease;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
-.contact-item:hover .opacity {
-    transform: scaleY(1);       /* se remplit vers le bas */
+/* Témoignages */
+.testimonial-card {
+    flex: 0 0 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-        @keyframes glisse {
-            0% {
-                transform: scale(0.1);
-            }
-        }
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
 
-        .contact-item {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            padding: 30px 20px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            min-height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+.testimonial-content {
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
 
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-        .contact-item img {
-           min-width: 500px;
-            height: 100px;
-            min-height: 300px;
-            margin-bottom: 15px;
-        }
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e67e22;
+}
 
-        .contact-item h3 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
+.author-info h4 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
 
-        .contact-item p {
-            font-size: 1em;
-            color: #666;
-            line-height: 1.6;
-        }
+.author-info span {
+    color: #e67e22;
+    font-weight: 600;
+}
 
-        .contact-item a {
-            color: #0A22F3;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            font-size: 1.3rem;
-        }
+/* Lien vidéo */
+.navsav {
+    text-align: center;
+    margin: 60px 0;
+}
 
-        .contact-item a:hover {
-            color: #0A22F3;
-        }
+.video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: white;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+}
 
-        .contact-item img {
-            width: 30%;
-            height: 40%;
-            margin-bottom: 15px;
-        }
+.video-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(230, 126, 34, 0.4);
+    gap: 20px;
+}
 
-        b {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: #2c3e50;
-        }
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 60px 10% 0;
+    text-align: left;
+    margin-top: 80px;
+}
 
-        .navbar h1 {
-            font-size: 1.5rem;
-        }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .navsav a {
-            background-color: yellowgreen;
-            padding: 10px;
-            text-decoration: none;
-            cursor: pointer;
-        }
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+}
 
-        .navsav {
-            text-align: center;
-        }
+.footer-links,
+.footer-social,
+.footer-contact {
+    padding: 10px;
+}
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 40px 10%;
-            text-align: left;
-        }
+footer h3 {
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    color: #e67e22;
+    font-weight: 600;
+}
 
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+footer ul {
+    list-style: none;
+    padding: 0;
+}
 
-        .footer-container div {
-            flex: 1;
-            min-width: 250px;
-        }
+footer ul li {
+    margin-bottom: 15px;
+}
 
-        .footer-links,
-        .footer-social,
-        .footer-contact {
-            padding: 10px;
-        }
+footer ul li a {
+    color: #DCDCDC;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
 
-        footer h3 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
+footer ul li a:hover {
+    color: #e67e22;
+    transform: translateX(5px);
+}
 
-        footer ul {
-            list-style: none;
-            padding: 0;
-        }
+.footer-bottom {
+    background-color: rgba(34, 34, 34, 0.9);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-        footer ul li {
-            margin-bottom: 10px;
-        }
+/* Responsive */
+@media (max-width: 1200px) {
+    .carousel-track,
+    .gallery-track,
+    .testimonials-track {
+        padding: 0 30px;
+    }
+    
+    .destination-card {
+        flex: 0 0 340px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 280px;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 350px;
+    }
+}
 
-        footer ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        gap: 0;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+    
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+    
+    .menu li a {
+        padding: 15px;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .album-presentation {
+        padding: 50px 15px;
+        margin: 15px;
+    }
+    
+    .album-presentation h1 {
+        font-size: 2.2em;
+    }
+    
+    .album-presentation .subtitle {
+        font-size: 1.2em;
+    }
+    
+    .album-presentation .description {
+        font-size: 1em;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2em;
+    }
+    
+    .carousel-track,
+    .gallery-track,
+    .testimonials-track {
+        padding: 0 20px;
+        gap: 20px;
+    }
+    
+    .destination-card {
+        flex: 0 0 300px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 250px;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 300px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+}
 
-        footer ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-bottom {
-            background-color: #222;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .footer-container div {
-                min-width: auto;
-            }
-            .footer-bottom {
-                font-size: 1rem;
-                padding: 20px 0;
-            }
-            footer h3 {
-                font-size: 1.2rem;
-            }
-            footer ul li a {
-                font-size: 0.9rem;
-            }
-            .album-presentation {
-                padding: 40px 15px;
-            }
-            .album-presentation h1 {
-                font-size: 2.2em;
-            }
-            .album-presentation .subtitle {
-                font-size: 1.2em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .footer-container {
-                padding: 20px;
-            }
-            footer h3 {
-                font-size: 1.1rem;
-            }
-            footer ul li a {
-                font-size: 0.9rem;
-            }
-            .album-presentation h1 {
-                font-size: 1.8em;
-            }
-            .album-presentation .subtitle {
-                font-size: 1em;
-            }
-            .album-presentation .description {
-                font-size: 0.9em;
-            }
-        }
-
-        #menu-toggle {
-            display: none;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.388);
-            border-bottom: 1px solid white;
-            position: sticky;
-            top: -3px;
-        }
-
-        .menu {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .menu li {
-            text-decoration: none;
-            margin-top: 10px;
-        }
-
-        .menu a {
-            text-decoration: none;
-            margin: 0px;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 1.3rem;
-            color: white;
-        }
-
-        .menu-icon {
-            display: none;
-            font-size: 70px;
-            cursor: pointer;
-        }
-
-        @keyframes slideln {
-            from {
-                transform: translateX(-100%);
-            }
-            to {
-                transform: translateX(0);
-            }
-        }
-
-        .contact-item {
-            animation: slideln 0.9s ease forwards;
-        }
-
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                background: #333;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-                text-align: center;
-                padding: 10px 0;
-                width: 50%;
-            }
-            .menu-icon {
-                display: block;
-            }
-            #menu-toggle:checked~.menu {
-                display: flex;
-            }
-            .menu li a {
-                padding: 10px;
-                display: block;
-            }
-        }
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.4rem;
+    }
+    
+    .album-presentation h1 {
+        font-size: 1.8em;
+    }
+    
+    .album-presentation .subtitle {
+        font-size: 1em;
+    }
+    
+    .album-presentation .description {
+        font-size: 0.9em;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8em;
+    }
+    
+    .destination-card {
+        flex: 0 0 280px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 220px;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 280px;
+        padding: 25px;
+    }
+    
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+    
+    .video-link {
+        padding: 15px 25px;
+        font-size: 1.1em;
+    }
+}

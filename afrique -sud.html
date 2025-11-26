@@ -756,27 +756,72 @@
         }
     }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>ExploreAfrique - Découvrez le tourisme culturel en Afrique</title>
+
+    <meta name="description"
+        content="Plongez au cœur de l'Afrique culturelle : traditions, festivals, sites historiques, artisanat et peuples authentiques. ExploreAfrique vous guide à travers les richesses du continent.">
+
+    <meta name="keywords"
+        content="tourisme Afrique, culture africaine, voyage, traditions, artisanat, festivals, patrimoine">
+    <meta name="author" content="ExploreAfrique">
+
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="ExploreAfrique - Le tourisme culturel en Afrique">
+    <meta property="og:description"
+        content="Découvrez les trésors culturels africains : musiques, arts, traditions, et peuples fascinants.">
+    <meta property="og:image" content="https://exploreafrique.com/assets/images/og-preview.jpg">
+    <meta property="og:url" content="https://exploreafrique.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ExploreAfrique - Tourisme culturel africain">
+    <meta name="twitter:description"
+        content="ExploreAfrique vous emmène au cœur des traditions africaines, entre nature, histoire et rencontres humaines.">
+    <meta name="twitter:image" content="https://exploreafrique.com/assets/images/og-preview.jpg">
+
+    <link rel="canonical" href="https://exploreafrique.com">
+
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGMSHGQX7Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-HGMSHGQX7Q');
+    </script>
 </head>
 
 <body>
-
     <nav class="navbar">
-        <h1>Dèmondjitour</h1>
+        <h1>Dèmondjitour</h1>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">☰</label>
 
         <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="Apropos.html">A Propos</a></li>
-            <li><a href="gallerie.html">Galerie</a>
-            <li class="menu-hover"><a href="gallerie.html">Galerie</a>
-                  
-                </li>
+            <li class="menu-hover">
+                <a href="gallerie.html">Galerie</a>
+                <ul class="sousmenu">
+                    <li><a href="album.html">Album</a></li>
+                </ul>
+            </li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
     </nav>
     <div class="header-content">
         <h1>Afrique du Sud Éblouissante</h1>

@@ -1,650 +1,2151 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HGMSHGQX7Q"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-HGMSHGQX7Q');
-</script>
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blog.css">
-    <title>Document</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGMSHGQX7Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-HGMSHGQX7Q');
+    </script>
 
-    <meta charset="UTF-8">
-    <title>ExploreAfrique - Découvrez le tourisme culturel en Afrique</title>
+    <title>Blog Culturel - Dèmondjitour</title>
 
     <meta name="description" content="Plongez au cœur de l'Afrique culturelle : traditions, festivals, sites historiques, artisanat et peuples authentiques. ExploreAfrique vous guide à travers les richesses du continent.">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO complémentaires -->
     <meta name="keywords" content="tourisme Afrique, culture africaine, voyage, traditions, artisanat, festivals, patrimoine">
     <meta name="author" content="ExploreAfrique">
 
     <!-- Open Graph pour les réseaux sociaux -->
-    <meta property="og:title" content="ExploreAfrique - Le tourisme culturel en Afrique">
+    <meta property="og:title" content="Blog Culturel - Dèmondjitour">
     <meta property="og:description" content="Découvrez les trésors culturels africains : musiques, arts, traditions, et peuples fascinants.">
     <meta property="og:image" content="https://exploreafrique.com/assets/images/og-preview.jpg">
     <meta property="og:url" content="https://exploreafrique.com">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card (optionnel) -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ExploreAfrique - Tourisme culturel africain">
+    <meta name="twitter:title" content="Blog Culturel - Dèmondjitour">
     <meta name="twitter:description" content="ExploreAfrique vous emmène au cœur des traditions africaines, entre nature, histoire et rencontres humaines.">
     <meta name="twitter:image" content="https://exploreafrique.com/assets/images/og-preview.jpg">
 
     <link rel="canonical" href="https://exploreafrique.com">
-</head>
 
-</head>
-
-<body>
-    <nav class="navbar">
-        <h1>Dèmondjitour</h1>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">☰</label>
-
-        <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="Apropos.html">A Propos</a></li>
-           
-                <ul class="menu">
-                <li class="menu-hover">
-                    <a href="gallerie.html">Galerie ▼</a>
-                    <ul class="sousmenu">
-                        <li><a href="album.html">Album</a></li>
-                    </ul>
-                </li>
-            </ul></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-
-        </ul>
-    </nav>
-    <div class="Voyage">
-        <div class="logo">
-
-            <p>Découverte du tourisme culturel en Afrique</p>
-        </div>
-
-    </div>
-
-
-
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        .globe-culturel {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
+        /* blog.css - Version Complète et Corrigée */
+        :root {
+            --couleur-afrique: #e67e22;
+            --couleur-secondaire: #2c3e50;
+            --couleur-accent: #d35400;
+            --couleur-texte: #333;
+            --couleur-texte-clair: #666;
+            --couleur-fond: #f9f9f9;
+            --couleur-blanc: #ffffff;
+            --ombre-legere: 0 2px 10px rgba(0,0,0,0.1);
+            --ombre-portee: 0 10px 30px rgba(0,0,0,0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
         }
-        
-        .categorie {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .categorie:hover {
-            transform: translateY(-10px);
-        }
-        
-        .categorie-titre {
-            background: var(--couleur-afrique);
-            color: white;
-            padding: 15px;
+
+        * {
             margin: 0;
-            font-size: 1.3rem;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .contenu-categorie {
-            padding: 15px;
-            max-height: 400px;
-            overflow-y: auto;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--couleur-fond);
+            color: var(--couleur-texte);
+            line-height: 1.6;
         }
-        
-        .element-culture {
-            padding: 10px 0;
-            border-bottom: 1px dashed #eee;
+
+        /* Navigation - Version Arrangée */
+        .navbar {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--ombre-portee);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--couleur-afrique);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            padding: 0.75rem 2rem;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .navbar h1 {
+            font-size: 2rem;
+            color: var(--couleur-afrique);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--couleur-afrique), var(--couleur-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled h1 {
+            font-size: 1.7rem;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
             align-items: center;
         }
-        
-        .element-culture:last-child {
-            border-bottom: none;
+
+        .menu a {
+            text-decoration: none;
+            color: var(--couleur-secondaire);
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        
-        .picto {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            background-color: var(--couleur-secondaire);
+
+        .menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--couleur-afrique);
+            transition: var(--transition);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .menu a:hover {
+            color: var(--couleur-afrique);
+            transform: translateY(-2px);
+        }
+
+        .menu a:hover::before {
+            width: 80%;
+        }
+
+        .menu a.active {
+            background: linear-gradient(135deg, var(--couleur-afrique), var(--couleur-accent));
+            color: white;
+            box-shadow: 0 8px 25px rgba(230, 126, 34, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .menu a.active::before {
+            display: none;
+        }
+
+        .menu-hover {
+            position: relative;
+        }
+
+        .sousmenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--couleur-blanc);
+            box-shadow: var(--ombre-portee);
+            border-radius: 15px;
+            min-width: 220px;
+            z-index: 1000;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid rgba(230, 126, 34, 0.1);
+        }
+
+        .sousmenu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 20px;
+            width: 16px;
+            height: 16px;
+            background: var(--couleur-blanc);
+            transform: rotate(45deg);
+            border-top: 1px solid rgba(230, 126, 34, 0.1);
+            border-left: 1px solid rgba(230, 126, 34, 0.1);
+        }
+
+        .menu-hover:hover .sousmenu {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sousmenu li a {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            margin: 0.25rem 0;
+            color: var(--couleur-texte);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .sousmenu li a:hover {
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(211, 84, 0, 0.1));
+            color: var(--couleur-afrique);
+            transform: translateX(5px);
+        }
+
+        .sousmenu li a::before {
+            display: none;
+        }
+
+        /* Menu Mobile */
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--couleur-secondaire);
+            transition: var(--transition);
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .menu-icon:hover {
+            background: rgba(230, 126, 34, 0.1);
+            color: var(--couleur-afrique);
+        }
+
+        /* Badge pour les nouvelles pages */
+        .menu a.new::after {
+            content: 'Nouveau';
+            background: var(--couleur-accent);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            margin-left: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.9), rgba(44, 62, 80, 0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><pattern id="african" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M20,20 L80,80 M80,20 L20,80" stroke="%23ffffff" stroke-width="2" opacity="0.1"/></pattern><rect width="1200" height="800" fill="url(%23african)"/></svg>');
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat .number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat .label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* Filtres Section */
+        .filters-section {
+            background: var(--couleur-blanc);
+            padding: 3rem 0;
+            box-shadow: var(--ombre-legere);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .search-bar {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto 3rem;
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--couleur-texte-clair);
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #e9ecef;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: #f8f9fa;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--couleur-afrique);
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+            background: white;
+        }
+
+        .filters-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-group h4 {
+            margin-bottom: 1rem;
+            color: var(--couleur-secondaire);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-btn,
+        .category-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #e9ecef;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .category-btn:hover {
+            border-color: var(--couleur-afrique);
+            color: var(--couleur-afrique);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active,
+        .category-btn.active {
+            background: var(--couleur-afrique);
+            color: white;
+            border-color: var(--couleur-afrique);
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+        }
+
+        .active-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            min-height: 2rem;
+            align-items: center;
+        }
+
+        .active-filter {
+            background: var(--couleur-secondaire);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .active-filter .remove {
+            cursor: pointer;
+            opacity: 0.7;
+            transition: var(--transition);
+            padding: 2px;
+            border-radius: 50%;
+        }
+
+        .active-filter .remove:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Grille Culturelle */
+        .cultural-grid-section {
+            padding: 4rem 0;
+        }
+
+        .grid-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .grid-header h2 {
+            font-size: 2.5rem;
+            color: var(--couleur-secondaire);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .results-count {
+            color: var(--couleur-texte-clair);
+            font-size: 1.1rem;
+        }
+
+        .cultural-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .cultural-card {
+            background: var(--couleur-blanc);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--ombre-legere);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid #f0f0f0;
+        }
+
+        .cultural-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--ombre-portee);
+        }
+
+        .card-image {
+            height: 200px;
+            background: linear-gradient(45deg, var(--couleur-afrique), var(--couleur-secondaire));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--couleur-afrique);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: bold;
+            flex-shrink: 0;
         }
-        
-        @media (max-width: 768px) {
-            .globe-culturel {
-                grid-template-columns: 1fr;
-            }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--couleur-secondaire);
+            line-height: 1.3;
         }
-    </style>
-    </head>
 
-    <body>
+        .card-meta {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
 
+        .card-tag {
+            background: #f8f9fa;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--couleur-texte-clair);
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+        }
 
+        .card-description {
+            color: var(--couleur-texte-clair);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
 
-        <style>
-             :root {
-                --couleur-afrique: #e67e22;
-                --couleur-secondaire: #2c3e50;
-            }
-            
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f9f9f9;
-                color: #333;
-            }
-            
-            header {
-                color: white;
-                padding: 2rem;
-                text-align: center;
-            }
-            
-            .filtres {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
+        .load-more-container {
+            text-align: center;
+        }
+
+        .load-more-btn {
+            background: var(--couleur-blanc);
+            border: 2px solid var(--couleur-afrique);
+            color: var(--couleur-afrique);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .load-more-btn:hover {
+            background: var(--couleur-afrique);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
+        }
+
+        /* Section Carte Interactive */
+        .map-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.02"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23000"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--couleur-secondaire);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--couleur-texte-clair);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .compact-map-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            background: var(--couleur-blanc);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            min-height: 500px;
+        }
+
+        .map-visual {
+            position: relative;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .africa-outline {
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><path d="M400,100 C500,150 600,200 650,300 C700,400 650,500 550,550 C450,600 350,550 300,450 C250,350 300,250 400,100 Z" fill="%23bdc3c7" stroke="%23ffffff" stroke-width="2"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+        }
+
+        .country-dots-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .country-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--couleur-afrique);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .country-dot:hover {
+            transform: scale(1.5);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .country-dot.active {
+            background: var(--couleur-accent);
+            transform: scale(1.5);
+            box-shadow: 0 4px 12px rgba(211, 84, 0, 0.5);
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .map-stats {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .map-stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--couleur-afrique);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--couleur-texte-clair);
+            font-weight: 600;
+        }
+
+        .map-controls {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .region-filters {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .region-filter {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .region-filter:hover {
+            border-color: var(--couleur-afrique);
+            transform: translateX(5px);
+        }
+
+        .region-filter.active {
+            background: var(--couleur-afrique);
+            color: white;
+            border-color: var(--couleur-afrique);
+        }
+
+        .region-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .region-color.tous { background: #bdc3c7; }
+        .region-color.ouest { background: #e74c3c; }
+        .region-color.est { background: #f39c12; }
+        .region-color.centrale { background: #27ae60; }
+        .region-color.nord { background: #3498db; }
+        .region-color.australe { background: #9b59b6; }
+
+        .country-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .info-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .country-flag {
+            font-size: 2rem;
+        }
+
+        .info-header h3 {
+            color: var(--couleur-secondaire);
+            font-size: 1.4rem;
+        }
+
+        .info-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .country-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: var(--couleur-afrique);
+            color: white;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: var(--couleur-afrique);
+        }
+
+        .stat-item:hover .stat-value {
+            color: white;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            font-weight: 600;
+        }
+
+        .cultural-preview h4 {
+            margin-bottom: 1rem;
+            color: var(--couleur-secondaire);
+            font-size: 1.1rem;
+        }
+
+        .preview-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .preview-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .preview-item:hover {
+            border-color: var(--couleur-afrique);
+            transform: translateX(5px);
+        }
+
+        .preview-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--couleur-afrique);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .preview-content h5 {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--couleur-secondaire);
+        }
+
+        .preview-content p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--couleur-texte-clair);
+        }
+
+        .placeholder {
+            color: var(--couleur-texte-clair);
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--couleur-secondaire), var(--couleur-afrique));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .newsletter-content h2 {
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+
+        .newsletter-content p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 400px;
+            margin: 0 auto;
+            gap: 0.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .newsletter-form button {
+            background: var(--couleur-accent);
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--couleur-secondaire);
+            color: white;
+            padding: 4rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-links h3,
+        .footer-social h3,
+        .footer-contact h3 {
+            margin-bottom: 1.5rem;
+            color: var(--couleur-afrique);
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        footer ul li a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .navbar {
                 padding: 1rem;
-                background: #eee;
+            }
+            
+            .menu {
+                gap: 1rem;
+            }
+            
+            .menu a {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
                 flex-wrap: wrap;
             }
             
-            .globe-culturel {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
-                padding: 20px;
-                max-width: 1400px;
-                margin: 0 auto;
+            .navbar h1 {
+                font-size: 1.5rem;
             }
             
-            .categorie {
-                background: white;
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--couleur-blanc);
+                box-shadow: var(--ombre-portee);
+                padding: 1rem;
+                gap: 0.5rem;
+                border-top: 3px solid var(--couleur-afrique);
+            }
+            
+            .menu-icon {
+                display: block;
+                order: 2;
+            }
+            
+            #menu-toggle:checked ~ .menu {
+                display: flex;
+                animation: slideDown 0.3s ease;
+            }
+            
+            .menu a {
+                padding: 1rem 1.5rem;
                 border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
-                transition: transform 0.3s;
+                justify-content: flex-start;
+                width: 100%;
             }
             
-            .categorie:hover {
-                transform: translateY(-10px);
+            .menu-hover {
+                width: 100%;
             }
             
-            .categorie-titre {
-                background: var(--couleur-afrique);
-                color: white;
-                padding: 15px;
-                margin: 0;
+            .sousmenu {
+                position: static;
+                box-shadow: none;
+                border: none;
+                background: rgba(230, 126, 34, 0.05);
+                margin-top: 0.5rem;
+                width: 100%;
+                display: none;
+                animation: none;
+            }
+            
+            .sousmenu::before {
+                display: none;
+            }
+            
+            #menu-toggle:checked ~ .menu .menu-hover:hover .sousmenu,
+            .menu-hover:active .sousmenu {
+                display: block;
+            }
+            
+            .menu a.active {
+                transform: none;
+            }
+
+            .blog-hero {
+                padding: 4rem 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 1rem;
+            }
+
+            .stat {
+                padding: 1rem;
+            }
+
+            .filters-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cultural-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .compact-map-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 400px auto;
+            }
+
+            .map-stats {
+                justify-content: center;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 0.75rem 1rem;
+            }
+            
+            .navbar h1 {
                 font-size: 1.3rem;
             }
             
-            .contenu-categorie {
-                padding: 15px;
-                max-height: 400px;
-                overflow-y: auto;
+            .menu-icon {
+                font-size: 1.5rem;
             }
             
-            .element-culture {
-                padding: 10px 0;
-                border-bottom: 1px dashed #eee;
-                display: flex;
-                align-items: center;
+            .menu a {
+                padding: 0.875rem 1.25rem;
+                font-size: 0.9rem;
             }
-            
-            .element-culture:last-child {
-                border-bottom: none;
+
+            .hero-content h1 {
+                font-size: 2rem;
             }
-            
-            .picto {
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-                background-color: var(--couleur-secondaire);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-weight: bold;
+
+            .container {
+                padding: 0 1rem;
             }
-            
-            .pays-tag {
-                display: inline-block;
-                background: #f1f1f1;
-                padding: 2px 8px;
-                border-radius: 12px;
-                font-size: 0.8rem;
-                margin-left: 8px;
-                color: var(--couleur-secondaire);
+
+            .country-stats {
+                grid-template-columns: 1fr;
             }
+        }
+
+        /* Animation de scroll */
+        @keyframes navbarScroll {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .navbar.scrolled {
+            animation: navbarScroll 0.3s ease;
+        }
+
+        /* Amélioration de l'accessibilité */
+        .menu a:focus {
+            outline: 2px solid var(--couleur-afrique);
+            outline-offset: 2px;
+        }
+
+        .menu a:focus-visible {
+            background: rgba(230, 126, 34, 0.1);
+        }
+
+        /* Indicateur de page active amélioré */
+        .menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px var(--couleur-afrique);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1>Dèmondjitour</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À Propos</a></li>
+            <li class="menu-hover">
+                <a href="gallerie.html">Galerie</a>
+                <ul class="sousmenu">
+                    <li><a href="album.html">Album</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="hero-content">
+            <h1>Patrimoine Culturel Panafricain</h1>
+            <p class="hero-subtitle">Découvrez la richesse culturelle des 54 pays africains à travers un voyage unique</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="number">500+</span>
+                    <span class="label">Trésors Culturels</span>
+                </div>
+                <div class="stat">
+                    <span class="number">54</span>
+                    <span class="label">Pays</span>
+                </div>
+                <div class="stat">
+                    <span class="number">6</span>
+                    <span class="label">Régions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres Avancés -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Rechercher un élément culturel, un pays, une tradition...">
+            </div>
             
-            @media (max-width: 768px) {
-                .globe-culturel {
-                    grid-template-columns: 1fr;
+            <div class="filters-container">
+                <div class="filter-group">
+                    <h4>Régions</h4>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="tous">Tous</button>
+                        <button class="filter-btn" data-filter="afrique-ouest">Afrique de l'Ouest</button>
+                        <button class="filter-btn" data-filter="afrique-est">Afrique de l'Est</button>
+                        <button class="filter-btn" data-filter="afrique-centrale">Afrique Centrale</button>
+                        <button class="filter-btn" data-filter="afrique-nord">Afrique du Nord</button>
+                        <button class="filter-btn" data-filter="afrique-australe">Afrique Australe</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Catégories</h4>
+                    <div class="filter-buttons">
+                        <button class="category-btn active" data-category="tous">Toutes</button>
+                        <button class="category-btn" data-category="patrimoine">Patrimoine UNESCO</button>
+                        <button class="category-btn" data-category="festivals">Festivals</button>
+                        <button class="category-btn" data-category="traditions">Traditions</button>
+                        <button class="category-btn" data-category="cuisine">Cuisine</button>
+                        <button class="category-btn" data-category="art">Art Contemporain</button>
+                        <button class="category-btn" data-category="litterature">Littérature</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="active-filters" id="activeFilters">
+                <!-- Filtres actifs apparaîtront ici -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Grille Culturelle -->
+    <section class="cultural-grid-section">
+        <div class="container">
+            <div class="grid-header">
+                <h2>Explorer le Patrimoine Africain</h2>
+                <p class="results-count" id="resultsCount">Chargement des trésors culturels...</p>
+            </div>
+
+            <div class="cultural-grid" id="culturalGrid">
+                <!-- Les éléments culturels seront générés par JavaScript -->
+            </div>
+
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-sync-alt"></i>
+                    Charger plus d'éléments
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte Interactive Compacte -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Carte Culturelle de l'Afrique</h2>
+                <p>Explorez visuellement la répartition des trésors culturels à travers le continent</p>
+            </div>
+            
+            <div class="compact-map-container">
+                <div class="map-visual">
+                    <div class="africa-outline">
+                        <div class="country-dots-container" id="countryDots">
+                            <!-- Les points des pays seront générés par JavaScript -->
+                        </div>
+                    </div>
+                    <div class="map-overlay">
+                        <div class="map-stats">
+                            <div class="map-stat">
+                                <span class="stat-number" id="mapCulturalCount">0</span>
+                                <span class="stat-label">Trésors</span>
+                            </div>
+                            <div class="map-stat">
+                                <span class="stat-number" id="mapCountriesCount">0</span>
+                                <span class="stat-label">Pays</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-controls">
+                    <div class="region-filters">
+                        <button class="region-filter active" data-region="tous">
+                            <span class="region-color tous"></span>
+                            Tous
+                        </button>
+                        <button class="region-filter" data-region="afrique-ouest">
+                            <span class="region-color ouest"></span>
+                            Ouest
+                        </button>
+                        <button class="region-filter" data-region="afrique-est">
+                            <span class="region-color est"></span>
+                            Est
+                        </button>
+                        <button class="region-filter" data-region="afrique-centrale">
+                            <span class="region-color centrale"></span>
+                            Centrale
+                        </button>
+                        <button class="region-filter" data-region="afrique-nord">
+                            <span class="region-color nord"></span>
+                            Nord
+                        </button>
+                        <button class="region-filter" data-region="afrique-australe">
+                            <span class="region-color australe"></span>
+                            Australe
+                        </button>
+                    </div>
+                </div>
+
+                <div class="country-info">
+                    <div class="info-header">
+                        <div class="country-flag" id="countryFlag">🌍</div>
+                        <h3 id="selectedCountryName">Sélectionnez un pays</h3>
+                    </div>
+                    <div class="info-content">
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="countryCulturalCount">0</span>
+                                <span class="stat-label">Trésors Culturels</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="countryRegion">-</span>
+                                <span class="stat-label">Région</span>
+                            </div>
+                        </div>
+                        <div class="cultural-preview">
+                            <h4>Trésors Culturels</h4>
+                            <div class="preview-items" id="culturalPreview">
+                                <p class="placeholder">Cliquez sur un pays pour découvrir ses trésors culturels</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez Connecté à la Culture Africaine</h2>
+                <p>Recevez chaque mois des découvertes culturelles exclusives dans votre boîte mail</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Apropos.html">À Propos</a></li>
+                    <li><a href="gallerie.html">Galerie</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://t.me/demondjitourBenin"><i class="fab fa-telegram"></i> Télégram</a></li>
+                    <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:demondjil@gmail.com"><i class="fas fa-envelope"></i> demondjil@gmail.com</a></li>
+                    <li><a href="tel:+2290196731233"><i class="fas fa-phone"></i> +229 01 96 73 12 33</a></li>
+                    <li><a href="tel:+2290195248833"><i class="fas fa-phone"></i> +229 01 95 24 88 33</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dèmondjitour. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // blog.js - Version Complète
+        document.addEventListener('DOMContentLoaded', function() {
+            // Données des éléments culturels
+            const culturalData = [
+                {
+                    id: 1,
+                    title: "Festival des Masques de Dédougou",
+                    description: "Célébration annuelle des traditions masquées du Burkina Faso, rassemblant des communautés de toute la région.",
+                    region: "afrique-ouest",
+                    category: "festivals",
+                    country: "Burkina Faso",
+                    icon: "🎭",
+                    tags: ["Tradition", "Danse", "Cérémonie"]
+                },
+                {
+                    id: 2,
+                    title: "Site Archéologique de Carthage",
+                    description: "Ancienne cité punique et romaine classée au patrimoine mondial de l'UNESCO.",
+                    region: "afrique-nord",
+                    category: "patrimoine",
+                    country: "Tunisie",
+                    icon: "🏛️",
+                    tags: ["Histoire", "Archéologie", "UNESCO"]
+                },
+                {
+                    id: 3,
+                    title: "Cuisine Wolof",
+                    description: "Traditions culinaires du Sénégal avec le thiéboudienne comme plat emblématique.",
+                    region: "afrique-ouest",
+                    category: "cuisine",
+                    country: "Sénégal",
+                    icon: "🍛",
+                    tags: ["Gastronomie", "Tradition", "Riz"]
+                },
+                {
+                    id: 4,
+                    title: "Art Contemporain de Johannesburg",
+                    description: "Scène artistique vibrante mêlant traditions africaines et expressions modernes.",
+                    region: "afrique-australe",
+                    category: "art",
+                    country: "Afrique du Sud",
+                    icon: "🎨",
+                    tags: ["Moderne", "Urban", "Innovation"]
+                },
+                {
+                    id: 5,
+                    title: "Cérémonie du Café Éthiopien",
+                    description: "Rituel traditionnel de préparation et de partage du café, symbole d'hospitalité.",
+                    region: "afrique-est",
+                    category: "traditions",
+                    country: "Éthiopie",
+                    icon: "☕",
+                    tags: ["Rituel", "Social", "Café"]
+                },
+                {
+                    id: 6,
+                    title: "Littérature Yoruba",
+                    description: "Richissime tradition littéraire orale et écrite du peuple Yoruba.",
+                    region: "afrique-ouest",
+                    category: "litterature",
+                    country: "Nigeria",
+                    icon: "📚",
+                    tags: ["Poésie", "Contes", "Langue"]
+                },
+                {
+                    id: 7,
+                    title: "Festival de Musique de Fès",
+                    description: "Rencontre annuelle des musiques sacrées du monde dans la ville impériale.",
+                    region: "afrique-nord",
+                    category: "festivals",
+                    country: "Maroc",
+                    icon: "🎵",
+                    tags: ["Musique", "Spiritualité", "Rencontre"]
+                },
+                {
+                    id: 8,
+                    title: "Sites Rupestres du Tassili",
+                    description: "Galeries d'art préhistorique en plein désert du Sahara.",
+                    region: "afrique-nord",
+                    category: "patrimoine",
+                    country: "Algérie",
+                    icon: "🖼️",
+                    tags: ["Préhistoire", "Art", "Désert"]
+                },
+                {
+                    id: 9,
+                    title: "Danse Mapouka",
+                    description: "Danse traditionnelle ivoirienne aux mouvements hipnotiques.",
+                    region: "afrique-ouest",
+                    category: "traditions",
+                    country: "Côte d'Ivoire",
+                    icon: "💃",
+                    tags: ["Danse", "Rythme", "Expression"]
+                },
+                {
+                    id: 10,
+                    title: "Cuisine Bamiléké",
+                    description: "Saveurs et techniques culinaires uniques de l'ouest du Cameroun.",
+                    region: "afrique-centrale",
+                    category: "cuisine",
+                    country: "Cameroun",
+                    icon: "🍲",
+                    tags: ["Épicé", "Tradition", "Communauté"]
                 }
+            ];
+
+            // Données des pays
+            const countriesData = [
+                { name: "Bénin", region: "afrique-ouest", flag: "🇧🇯", culturalCount: 8 },
+                { name: "Burkina Faso", region: "afrique-ouest", flag: "🇧🇫", culturalCount: 12 },
+                { name: "Côte d'Ivoire", region: "afrique-ouest", flag: "🇨🇮", culturalCount: 15 },
+                { name: "Ghana", region: "afrique-ouest", flag: "🇬🇭", culturalCount: 10 },
+                { name: "Mali", region: "afrique-ouest", flag: "🇲🇱", culturalCount: 18 },
+                { name: "Nigeria", region: "afrique-ouest", flag: "🇳🇬", culturalCount: 25 },
+                { name: "Sénégal", region: "afrique-ouest", flag: "🇸🇳", culturalCount: 14 },
+                { name: "Togo", region: "afrique-ouest", flag: "🇹🇬", culturalCount: 7 },
+                
+                { name: "Éthiopie", region: "afrique-est", flag: "🇪🇹", culturalCount: 22 },
+                { name: "Kenya", region: "afrique-est", flag: "🇰🇪", culturalCount: 16 },
+                { name: "Tanzanie", region: "afrique-est", flag: "🇹🇿", culturalCount: 13 },
+                { name: "Ouganda", region: "afrique-est", flag: "🇺🇬", culturalCount: 9 },
+                
+                { name: "Cameroun", region: "afrique-centrale", flag: "🇨🇲", culturalCount: 11 },
+                { name: "République du Congo", region: "afrique-centrale", flag: "🇨🇬", culturalCount: 8 },
+                { name: "République Démocratique du Congo", region: "afrique-centrale", flag: "🇨🇩", culturalCount: 19 },
+                { name: "Gabon", region: "afrique-centrale", flag: "🇬🇦", culturalCount: 6 },
+                
+                { name: "Algérie", region: "afrique-nord", flag: "🇩🇿", culturalCount: 20 },
+                { name: "Égypte", region: "afrique-nord", flag: "🇪🇬", culturalCount: 28 },
+                { name: "Maroc", region: "afrique-nord", flag: "🇲🇦", culturalCount: 17 },
+                { name: "Tunisie", region: "afrique-nord", flag: "🇹🇳", culturalCount: 15 },
+                
+                { name: "Afrique du Sud", region: "afrique-australe", flag: "🇿🇦", culturalCount: 23 },
+                { name: "Botswana", region: "afrique-australe", flag: "🇧🇼", culturalCount: 7 },
+                { name: "Namibie", region: "afrique-australe", flag: "🇳🇦", culturalCount: 8 },
+                { name: "Zimbabwe", region: "afrique-australe", flag: "🇿🇼", culturalCount: 12 }
+            ];
+
+            // Éléments DOM
+            const culturalGrid = document.getElementById('culturalGrid');
+            const searchInput = document.getElementById('searchInput');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const resultsCount = document.getElementById('resultsCount');
+            const activeFilters = document.getElementById('activeFilters');
+            const countryDots = document.getElementById('countryDots');
+            const regionFilters = document.querySelectorAll('.region-filter');
+            const mapCulturalCount = document.getElementById('mapCulturalCount');
+            const mapCountriesCount = document.getElementById('mapCountriesCount');
+            const countryFlag = document.getElementById('countryFlag');
+            const selectedCountryName = document.getElementById('selectedCountryName');
+            const countryCulturalCount = document.getElementById('countryCulturalCount');
+            const countryRegion = document.getElementById('countryRegion');
+            const culturalPreview = document.getElementById('culturalPreview');
+
+            // Variables d'état
+            let currentFilters = {
+                region: 'tous',
+                category: 'tous',
+                search: ''
+            };
+            let displayedItems = 6;
+            let currentCountry = null;
+
+            // Initialisation
+            init();
+
+            function init() {
+                renderCulturalGrid();
+                setupEventListeners();
+                initializeMap();
+                updateMapStats();
+                setupNavbarScroll();
             }
-        </style>
-        </head>
 
-        <body>
-            <header>
-                <h1>Patrimoine Culturel Panafricain</h1>
-                <p>Découvrez la richesse culturelle des 54 pays africains</p>
-            </header>
+            function setupNavbarScroll() {
+                // Gestion du scroll pour la navbar
+                window.addEventListener('scroll', function() {
+                    const navbar = document.querySelector('.navbar');
+                    if (window.scrollY > 100) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
 
-            <div class="filtres">
-                <button data-filtre="tous">Tous</button>
-                <button data-filtre="afrique-ouest">Afrique de l'Ouest</button>
-                <button data-filtre="afrique-est">Afrique de l'Est</button>
-                <button data-filtre="afrique-centrale">Afrique Centrale</button>
-                <button data-filtre="afrique-nord">Afrique du Nord</button>
-                <button data-filtre="afrique-australe">Afrique Australe</button>
-            </div>
-            <div class="globe-culturel">
-                <!-- Patrimoine UNESCO -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Patrimoine UNESCO</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture">
-                            <div class="picto">1</div>
-                            <span>Mosquées de Tombouctou (Mali)</span>
-                        </div>
-                        <div class="element-culture">
-                            <div class="picto">2</div>
-                            <span>Ruines de Loropéni (Burkina Faso)</span>
-                        </div>
-                        <!-- Ajoutez 30+ autres sites -->
-                    </div>
-                </div>
-
-                <!-- Festivals -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Festivals Majeurs</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture">
-                            <div class="picto">🎭</div>
-                            <span>Festival des Masques (Côte d'Ivoire)</span>
-                        </div>
-                        <div class="element-culture">
-                            <div class="picto">🎶</div>
-                            <span>Festival au Désert (Mali)</span>
-                        </div>
-                        <!-- Ajoutez 50+ autres festivals -->
-                    </div>
-                </div>
-
-                <!-- Traditions -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Traditions Vivantes</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture">
-                            <div class="picto">💃</div>
-                            <span>Danse Adumu (Masaï)</span>
-                        </div>
-                        <div class="element-culture">
-                            <div class="picto">🎨</div>
-                            <span>Peintures Ndebele (Afrique du Sud)</span>
-                        </div>
-                        <!-- Ajoutez 100+ autres traditions -->
-                    </div>
-                </div>
-
-                <!-- Cuisine -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Saveurs Culinaires</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture">
-                            <div class="picto">🍲</div>
-                            <span>Thiéboudienne (Sénégal)</span>
-                        </div>
-                        <div class="element-culture">
-                            <div class="picto">🍛</div>
-                            <span>Injera (Éthiopie)</span>
-                        </div>
-                        <!-- Ajoutez 50+ autres plats -->
-                    </div>
-                </div>
-
-                <!-- Art Contemporain -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Art Contemporain</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture">
-                            <div class="picto">🖼️</div>
-                            <span>Biennale de Dakar (Sénégal)</span>
-                        </div>
-                        <div class="element-culture">
-                            <div class="picto">🎭</div>
-                            <span>Afropolis (Afrique du Sud)</span>
-                        </div>
-                        <!-- Ajoutez 30+ autres événements -->
-                    </div>
-                </div>
-
-                <!-- Littérature -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Trésors Littéraires</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture">
-                            <div class="picto">📚</div>
-                            <span>Épopée de Soundjata (Mali)</span>
-                        </div>
-                        <div class="element-culture">
-                            <div class="picto">✍️</div>
-                            <span>Festival des Mots (Mali)</span>
-                        </div>
-                        <!-- Ajoutez 50+ autres références -->
-                    </div>
-                </div>
-            </div>
-            <div class="globe-culturel">
-                <!-- Patrimoine UNESCO -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Patrimoine UNESCO</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
-                            <div class="picto">1</div>
-                            <span>Mosquées de Tombouctou <span class="pays-tag">Mali</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="ethiopie" data-region="afrique-est">
-                            <div class="picto">2</div>
-                            <span>Églises rupestres de Lalibela <span class="pays-tag">Éthiopie</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="egypte" data-region="afrique-nord">
-                            <div class="picto">3</div>
-                            <span>Pyramides de Gizeh <span class="pays-tag">Égypte</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
-                            <div class="picto">4</div>
-                            <span>Île de Gorée <span class="pays-tag">Sénégal</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="zimbabwe" data-region="afrique-australe">
-                            <div class="picto">5</div>
-                            <span>Monument du Grand Zimbabwe <span class="pays-tag">Zimbabwe</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
-                            <div class="picto">6</div>
-                            <span>Médina de Fès <span class="pays-tag">Maroc</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="tanzanie" data-region="afrique-est">
-                            <div class="picto">7</div>
-                            <span>Zone de conservation de Ngorongoro <span class="pays-tag">Tanzanie</span></span>
-                        </div>
-                        <!-- Ajouter d'autres éléments pour tous les pays -->
-                    </div>
-                </div>
-
-                <!-- Festivals -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Festivals Majeurs</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture" data-pays="burkina" data-region="afrique-ouest">
-                            <div class="picto">🎭</div>
-                            <span>FESPACO (Cinéma) <span class="pays-tag">Burkina Faso</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
-                            <div class="picto">🎶</div>
-                            <span>Festival au Désert <span class="pays-tag">Mali</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="cotedivoire" data-region="afrique-ouest">
-                            <div class="picto">💃</div>
-                            <span>Fêtes des Masques <span class="pays-tag">Côte d'Ivoire</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="afriquedusud" data-region="afrique-australe">
-                            <div class="picto">🎨</div>
-                            <span>National Arts Festival <span class="pays-tag">Afrique du Sud</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
-                            <div class="picto">🎼</div>
-                            <span>Festival Gnaoua <span class="pays-tag">Maroc</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="tanzanie" data-region="afrique-est">
-                            <div class="picto">🎤</div>
-                            <span>Sauti za Busara <span class="pays-tag">Tanzanie</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="rwanda" data-region="afrique-est">
-                            <div class="picto">💃</div>
-                            <span>Kwita Izina (Célébration des gorilles) <span class="pays-tag">Rwanda</span></span>
-                        </div>
-                        <!-- Ajouter d'autres festivals pour tous les pays -->
-                    </div>
-                </div>
-
-                <!-- Traditions -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Traditions Vivantes</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture" data-pays="kenya" data-region="afrique-est">
-                            <div class="picto">💃</div>
-                            <span>Danse Adumu (Masaï) <span class="pays-tag">Kenya</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="afriquedusud" data-region="afrique-australe">
-                            <div class="picto">🎨</div>
-                            <span>Peintures Ndebele <span class="pays-tag">Afrique du Sud</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="benin" data-region="afrique-ouest">
-                            <div class="picto">👑</div>
-                            <span>Coutume Vodoun <span class="pays-tag">Bénin</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="ethiopie" data-region="afrique-est">
-                            <div class="picto">☕</div>
-                            <span>Cérémonie du café <span class="pays-tag">Éthiopie</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="botswana" data-region="afrique-australe">
-                            <div class="picto">🎵</div>
-                            <span>Musique San <span class="pays-tag">Botswana</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="algerie" data-region="afrique-nord">
-                            <div class="picto">🧶</div>
-                            <span>Tapisserie de Ghardaïa <span class="pays-tag">Algérie</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="cameroun" data-region="afrique-centrale">
-                            <div class="picto">🎭</div>
-                            <span>Ngondo (Cérémonie Sawa) <span class="pays-tag">Cameroun</span></span>
-                        </div>
-                        <!-- Ajouter d'autres traditions pour tous les pays -->
-                    </div>
-                </div>
-
-                <!-- Cuisine -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Saveurs Culinaires</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
-                            <div class="picto">🍲</div>
-                            <span>Thiéboudienne <span class="pays-tag">Sénégal</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="ethiopie" data-region="afrique-est">
-                            <div class="picto">🍛</div>
-                            <span>Injera <span class="pays-tag">Éthiopie</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
-                            <div class="picto">🥘</div>
-                            <span>Couscous <span class="pays-tag">Maroc</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="nigeria" data-region="afrique-ouest">
-                            <div class="picto">🍲</div>
-                            <span>Jollof Rice <span class="pays-tag">Nigeria</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="madagascar" data-region="afrique-est">
-                            <div class="picto">🍚</div>
-                            <span>Romazava <span class="pays-tag">Madagascar</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="tunisie" data-region="afrique-nord">
-                            <div class="picto">🥙</div>
-                            <span>Brik <span class="pays-tag">Tunisie</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="rdc" data-region="afrique-centrale">
-                            <div class="picto">🍖</div>
-                            <span>Moambe <span class="pays-tag">RDC</span></span>
-                        </div>
-                        <!-- Ajouter d'autres plats pour tous les pays -->
-                    </div>
-                </div>
-
-                <!-- Art Contemporain -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Art Contemporain</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
-                            <div class="picto">🖼️</div>
-                            <span>Biennale de Dakar <span class="pays-tag">Sénégal</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="afriquedusud" data-region="afrique-australe">
-                            <div class="picto">🎭</div>
-                            <span>Afropolis <span class="pays-tag">Afrique du Sud</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="nigeria" data-region="afrique-ouest">
-                            <div class="picto">🖌️</div>
-                            <span>Art X Lagos <span class="pays-tag">Nigeria</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="maroc" data-region="afrique-nord">
-                            <div class="picto">🏺</div>
-                            <span>Marrakech Biennale <span class="pays-tag">Maroc</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="kenya" data-region="afrique-est">
-                            <div class="picto">🎨</div>
-                            <span>Nairobi Contemporary Art Institute <span class="pays-tag">Kenya</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="angola" data-region="afrique-australe">
-                            <div class="picto">📷</div>
-                            <span>Triennale de Luanda <span class="pays-tag">Angola</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="cotedivoire" data-region="afrique-ouest">
-                            <div class="picto">🏛️</div>
-                            <span>Musée des Civilisations Noires <span class="pays-tag">Côte d'Ivoire</span></span>
-                        </div>
-                        <!-- Ajouter d'autres événements artistiques pour tous les pays -->
-                    </div>
-                </div>
-
-                <!-- Littérature -->
-                <div class="categorie">
-                    <h2 class="categorie-titre">Trésors Littéraires</h2>
-                    <div class="contenu-categorie">
-                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
-                            <div class="picto">📚</div>
-                            <span>Épopée de Soundjata <span class="pays-tag">Mali</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="mali" data-region="afrique-ouest">
-                            <div class="picto">✍️</div>
-                            <span>Festival des Mots <span class="pays-tag">Mali</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="nigeria" data-region="afrique-ouest">
-                            <div class="picto">🖋️</div>
-                            <span>Chinua Achebe (Écrivain) <span class="pays-tag">Nigeria</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="senegal" data-region="afrique-ouest">
-                            <div class="picto">📖</div>
-                            <span>Léopold Sédar Senghor <span class="pays-tag">Sénégal</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="algerie" data-region="afrique-nord">
-                            <div class="picto">✒️</div>
-                            <span>Albert Camus <span class="pays-tag">Algérie</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="kenya" data-region="afrique-est">
-                            <div class="picto">📓</div>
-                            <span>Ngũgĩ wa Thiong'o <span class="pays-tag">Kenya</span></span>
-                        </div>
-                        <div class="element-culture" data-pays="egypte" data-region="afrique-nord">
-                            <div class="picto">📜</div>
-                            <span>Naguib Mahfouz <span class="pays-tag">Égypte</span></span>
-                        </div>
-                        <!-- Ajouter d'autres références littéraires pour tous les pays -->
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                // Script pour le filtrage par région
-                document.querySelectorAll('.filtres button').forEach(button => {
-                    button.addEventListener('click', () => {
-                        const region = button.dataset.filtre;
-
-                        document.querySelectorAll('.element-culture').forEach(element => {
-                            if (region === 'tous' || element.dataset.region === region) {
-                                element.style.display = 'flex';
-                            } else {
-                                element.style.display = 'none';
-                            }
-                        });
+                // Fermer le menu mobile quand on clique sur un lien
+                document.querySelectorAll('.menu a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        const menuToggle = document.getElementById('menu-toggle');
+                        if (menuToggle.checked) {
+                            menuToggle.checked = false;
+                        }
                     });
                 });
-            </script>
-        </body>
 
-</html>
+                // Animation d'entrée de la navbar
+                const navbar = document.querySelector('.navbar');
+                navbar.style.opacity = '0';
+                navbar.style.transform = 'translateY(-20px)';
+                
+                setTimeout(() => {
+                    navbar.style.transition = 'all 0.5s ease';
+                    navbar.style.opacity = '1';
+                    navbar.style.transform = 'translateY(0)';
+                }, 300);
+            }
+
+            function setupEventListeners() {
+                // Recherche
+                searchInput.addEventListener('input', function(e) {
+                    currentFilters.search = e.target.value.toLowerCase();
+                    displayedItems = 6;
+                    renderCulturalGrid();
+                    updateActiveFilters();
+                });
+
+                // Filtres région
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        filterButtons.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        currentFilters.region = this.dataset.filter;
+                        displayedItems = 6;
+                        renderCulturalGrid();
+                        updateActiveFilters();
+                    });
+                });
+
+                // Filtres catégorie
+                categoryButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        categoryButtons.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        currentFilters.category = this.dataset.category;
+                        displayedItems = 6;
+                        renderCulturalGrid();
+                        updateActiveFilters();
+                    });
+                });
+
+                // Bouton charger plus
+                loadMoreBtn.addEventListener('click', function() {
+                    displayedItems += 6;
+                    renderCulturalGrid();
+                });
+
+                // Filtres région sur la carte
+                regionFilters.forEach(filter => {
+                    filter.addEventListener('click', function() {
+                        regionFilters.forEach(f => f.classList.remove('active'));
+                        this.classList.add('active');
+                        const region = this.dataset.region;
+                        filterMapByRegion(region);
+                    });
+                });
+            }
+
+            function initializeMap() {
+                renderCountryDots();
+                setupMapInteractions();
+            }
+
+            function renderCountryDots() {
+                countryDots.innerHTML = '';
+                
+                // Positions approximatives des pays sur la carte
+                const countryPositions = {
+                    "Bénin": { x: 45, y: 55 },
+                    "Burkina Faso": { x: 40, y: 50 },
+                    "Côte d'Ivoire": { x: 35, y: 60 },
+                    "Ghana": { x: 42, y: 58 },
+                    "Mali": { x: 35, y: 45 },
+                    "Nigeria": { x: 48, y: 55 },
+                    "Sénégal": { x: 25, y: 50 },
+                    "Togo": { x: 44, y: 57 },
+                    
+                    "Éthiopie": { x: 60, y: 45 },
+                    "Kenya": { x: 62, y: 55 },
+                    "Tanzanie": { x: 60, y: 60 },
+                    "Ouganda": { x: 58, y: 52 },
+                    
+                    "Cameroun": { x: 48, y: 52 },
+                    "République du Congo": { x: 52, y: 55 },
+                    "République Démocratique du Congo": { x: 55, y: 52 },
+                    "Gabon": { x: 50, y: 57 },
+                    
+                    "Algérie": { x: 40, y: 35 },
+                    "Égypte": { x: 58, y: 35 },
+                    "Maroc": { x: 35, y: 35 },
+                    "Tunisie": { x: 45, y: 35 },
+                    
+                    "Afrique du Sud": { x: 55, y: 75 },
+                    "Botswana": { x: 55, y: 65 },
+                    "Namibie": { x: 50, y: 70 },
+                    "Zimbabwe": { x: 58, y: 62 }
+                };
+
+                countriesData.forEach(country => {
+                    const position = countryPositions[country.name];
+                    if (position) {
+                        const dot = document.createElement('div');
+                        dot.className = 'country-dot';
+                        dot.style.left = `${position.x}%`;
+                        dot.style.top = `${position.y}%`;
+                        dot.dataset.country = country.name;
+                        dot.dataset.region = country.region;
+                        
+                        // Taille du point basée sur le nombre de trésors culturels
+                        const size = 8 + (country.culturalCount / 5);
+                        dot.style.width = `${size}px`;
+                        dot.style.height = `${size}px`;
+                        
+                        countryDots.appendChild(dot);
+                    }
+                });
+            }
+
+            function setupMapInteractions() {
+                // Clic sur les points de pays
+                document.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('country-dot')) {
+                        const countryName = e.target.dataset.country;
+                        selectCountry(countryName);
+                    }
+                });
+
+                // Survol des points de pays
+                document.addEventListener('mouseover', function(e) {
+                    if (e.target.classList.contains('country-dot')) {
+                        e.target.style.transform = 'scale(1.8)';
+                    }
+                });
+
+                document.addEventListener('mouseout', function(e) {
+                    if (e.target.classList.contains('country-dot')) {
+                        if (!e.target.classList.contains('active')) {
+                            e.target.style.transform = 'scale(1)';
+                        }
+                    }
+                });
+            }
+
+            function selectCountry(countryName) {
+                // Retirer la sélection précédente
+                document.querySelectorAll('.country-dot').forEach(dot => {
+                    dot.classList.remove('active');
+                    dot.style.transform = 'scale(1)';
+                });
+
+                // Ajouter la nouvelle sélection
+                const selectedDot = document.querySelector(`.country-dot[data-country="${countryName}"]`);
+                if (selectedDot) {
+                    selectedDot.classList.add('active');
+                    selectedDot.style.transform = 'scale(2)';
+                }
+
+                currentCountry = countryName;
+                updateCountryInfo(countryName);
+            }
+
+            function updateCountryInfo(countryName) {
+                const country = countriesData.find(c => c.name === countryName);
+                if (!country) return;
+
+                // Mettre à jour les informations du pays
+                countryFlag.textContent = country.flag;
+                selectedCountryName.textContent = country.name;
+                countryCulturalCount.textContent = country.culturalCount;
+                countryRegion.textContent = getRegionName(country.region);
+
+                // Mettre à jour l'aperçu des trésors culturels
+                updateCulturalPreview(countryName);
+            }
+
+            function updateCulturalPreview(countryName) {
+                const countryCulturalItems = culturalData.filter(item => 
+                    item.country === countryName
+                ).slice(0, 3); // Limiter à 3 éléments
+
+                culturalPreview.innerHTML = '';
+
+                if (countryCulturalItems.length === 0) {
+                    culturalPreview.innerHTML = '<p class="placeholder">Aucun trésor culturel trouvé pour ce pays</p>';
+                    return;
+                }
+
+                countryCulturalItems.forEach(item => {
+                    const previewItem = document.createElement('div');
+                    previewItem.className = 'preview-item';
+                    previewItem.innerHTML = `
+                        <div class="preview-icon">${item.icon}</div>
+                        <div class="preview-content">
+                            <h5>${item.title}</h5>
+                            <p>${getCategoryName(item.category)}</p>
+                        </div>
+                    `;
+                    culturalPreview.appendChild(previewItem);
+                });
+            }
+
+            function filterMapByRegion(region) {
+                const dots = document.querySelectorAll('.country-dot');
+                
+                dots.forEach(dot => {
+                    if (region === 'tous' || dot.dataset.region === region) {
+                        dot.style.opacity = '1';
+                        dot.style.pointerEvents = 'auto';
+                    } else {
+                        dot.style.opacity = '0.3';
+                        dot.style.pointerEvents = 'none';
+                    }
+                });
+
+                // Si un pays est sélectionné mais n'appartient pas à la région filtrée, désélectionner
+                if (currentCountry && region !== 'tous') {
+                    const currentCountryData = countriesData.find(c => c.name === currentCountry);
+                    if (currentCountryData && currentCountryData.region !== region) {
+                        document.querySelectorAll('.country-dot').forEach(dot => {
+                            dot.classList.remove('active');
+                            dot.style.transform = 'scale(1)';
+                        });
+                        currentCountry = null;
+                        resetCountryInfo();
+                    }
+                }
+            }
+
+            function resetCountryInfo() {
+                countryFlag.textContent = '🌍';
+                selectedCountryName.textContent = 'Sélectionnez un pays';
+                countryCulturalCount.textContent = '0';
+                countryRegion.textContent = '-';
+                culturalPreview.innerHTML = '<p class="placeholder">Cliquez sur un pays pour découvrir ses trésors culturels</p>';
+            }
+
+            function getRegionName(regionKey) {
+                const regions = {
+                    'afrique-ouest': 'Afrique de l\'Ouest',
+                    'afrique-est': 'Afrique de l\'Est',
+                    'afrique-centrale': 'Afrique Centrale',
+                    'afrique-nord': 'Afrique du Nord',
+                    'afrique-australe': 'Afrique Australe'
+                };
+                return regions[regionKey] || regionKey;
+            }
+
+            function getCategoryName(categoryKey) {
+                const categories = {
+                    'patrimoine': 'Patrimoine UNESCO',
+                    'festivals': 'Festivals',
+                    'traditions': 'Traditions',
+                    'cuisine': 'Cuisine',
+                    'art': 'Art Contemporain',
+                    'litterature': 'Littérature'
+                };
+                return categories[categoryKey] || categoryKey;
+            }
+
+            function renderCulturalGrid() {
+                const filteredData = filterCulturalData();
+                const itemsToShow = filteredData.slice(0, displayedItems);
+                
+                culturalGrid.innerHTML = '';
+
+                if (itemsToShow.length === 0) {
+                    culturalGrid.innerHTML = `
+                        <div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 4rem 2rem;">
+                            <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                            <h3 style="color: var(--couleur-texte-clair); margin-bottom: 1rem;">Aucun résultat trouvé</h3>
+                            <p style="color: var(--couleur-texte-clair);">Essayez de modifier vos critères de recherche ou de filtrage</p>
+                        </div>
+                    `;
+                } else {
+                    itemsToShow.forEach(item => {
+                        const card = createCulturalCard(item);
+                        culturalGrid.appendChild(card);
+                    });
+                }
+
+                updateResultsCount(filteredData.length);
+                updateLoadMoreButton(filteredData.length);
+                animateCards();
+            }
+
+            function filterCulturalData() {
+                return culturalData.filter(item => {
+                    const matchesRegion = currentFilters.region === 'tous' || item.region === currentFilters.region;
+                    const matchesCategory = currentFilters.category === 'tous' || item.category === currentFilters.category;
+                    const matchesSearch = currentFilters.search === '' || 
+                        item.title.toLowerCase().includes(currentFilters.search) ||
+                        item.description.toLowerCase().includes(currentFilters.search) ||
+                        item.country.toLowerCase().includes(currentFilters.search) ||
+                        item.tags.some(tag => tag.toLowerCase().includes(currentFilters.search));
+                    
+                    return matchesRegion && matchesCategory && matchesSearch;
+                });
+            }
+
+            function createCulturalCard(item) {
+                const card = document.createElement('div');
+                card.className = 'cultural-card';
+                card.innerHTML = `
+                    <div class="card-image">
+                        ${item.icon}
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon">${item.icon}</div>
+                            <h3 class="card-title">${item.title}</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="card-tag">${getRegionName(item.region)}</span>
+                            <span class="card-tag">${getCategoryName(item.category)}</span>
+                            <span class="card-tag">${item.country}</span>
+                        </div>
+                        <p class="card-description">${item.description}</p>
+                        <div class="card-meta">
+                            ${item.tags.map(tag => `<span class="card-tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+
+                // Ajouter un effet de zoom au survol
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+
+                return card;
+            }
+
+            function updateResultsCount(total) {
+                const showing = Math.min(displayedItems, total);
+                resultsCount.textContent = `Affichage de ${showing} sur ${total} trésors culturels`;
+            }
+
+            function updateLoadMoreButton(total) {
+                if (displayedItems >= total) {
+                    loadMoreBtn.style.display = 'none';
+                } else {
+                    loadMoreBtn.style.display = 'inline-flex';
+                }
+            }
+
+            function updateActiveFilters() {
+                activeFilters.innerHTML = '';
+
+                if (currentFilters.region !== 'tous') {
+                    const filter = createActiveFilter('region', getRegionName(currentFilters.region));
+                    activeFilters.appendChild(filter);
+                }
+
+                if (currentFilters.category !== 'tous') {
+                    const filter = createActiveFilter('category', getCategoryName(currentFilters.category));
+                    activeFilters.appendChild(filter);
+                }
+
+                if (currentFilters.search) {
+                    const filter = createActiveFilter('search', `"${currentFilters.search}"`);
+                    activeFilters.appendChild(filter);
+                }
+            }
+
+            function createActiveFilter(type, label) {
+                const filter = document.createElement('div');
+                filter.className = 'active-filter';
+                filter.innerHTML = `
+                    ${label}
+                    <span class="remove" data-type="${type}">×</span>
+                `;
+
+                filter.querySelector('.remove').addEventListener('click', function() {
+                    removeFilter(type);
+                });
+
+                return filter;
+            }
+
+            function removeFilter(type) {
+                switch (type) {
+                    case 'region':
+                        currentFilters.region = 'tous';
+                        filterButtons.forEach(btn => {
+                            if (btn.dataset.filter === 'tous') {
+                                btn.classList.add('active');
+                            } else {
+                                btn.classList.remove('active');
+                            }
+                        });
+                        break;
+                    case 'category':
+                        currentFilters.category = 'tous';
+                        categoryButtons.forEach(btn => {
+                            if (btn.dataset.category === 'tous') {
+                                btn.classList.add('active');
+                            } else {
+                                btn.classList.remove('active');
+                            }
+                        });
+                        break;
+                    case 'search':
+                        currentFilters.search = '';
+                        searchInput.value = '';
+                        break;
+                }
+
+                displayedItems = 6;
+                renderCulturalGrid();
+                updateActiveFilters();
+            }
+
+            function updateMapStats() {
+                const totalCultural = culturalData.length;
+                const totalCountries = countriesData.length;
+                
+                mapCulturalCount.textContent = totalCultural;
+                mapCountriesCount.textContent = totalCountries;
+            }
+
+            // Animation d'entrée des cartes
+            function animateCards() {
+                const cards = document.querySelectorAll('.cultural-card');
+                cards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }
+
+            // Gestion du formulaire de newsletter
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    
+                    // Simulation d'envoi
+                    this.innerHTML = `
+                        <div style="text-align: center; padding: 1rem;">
+                            <i class="fas fa-check-circle" style="color: #27ae60; font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <p>Merci pour votre inscription !</p>
+                        </div>
+                    `;
+                    
+                    // Réinitialiser après 3 secondes
+                    setTimeout(() => {
+                        this.innerHTML = `
+                            <input type="email" placeholder="Votre adresse email" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                                S'abonner
+                            </button>
+                        `;
+                    }, 3000);
+                });
+            }
+
+            // Amélioration de l'accessibilité
+            document.addEventListener('keydown', function(e) {
+                // Navigation au clavier dans la grille
+                if (e.key === 'Tab' && document.activeElement.classList.contains('cultural-card')) {
+                    document.activeElement.style.outline = '2px solid var(--couleur-afrique)';
+                }
+            });
+
+            // Gestion du redimensionnement de la fenêtre
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    renderCulturalGrid();
+                }, 250);
+            });
+
+            console.log('Blog culturel Dèmondjitour initialisé avec succès!');
+        });
+    </script>
 </body>
-
 </html>
-<footer>
-    <div class="footer-container">
-        <div class="footer-links">
-            <h3>Liens Utiles</h3>
-            <ul>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#experiences">Expériences</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <h3>Suivez-nous</h3>
-            <ul>
-                <li><a href="https://facebook.com">Facebook</a></li>
-                <li><a href="https://t.me/demondjitourBenin">Télégram</a></li>
-                <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag  ">Instagram</a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <ul>
-                <li><a href="Email : demondjil@gmail.com">Email : demondjil@gmail.com</a></li>
-                <li>
-                    <a href="+229 01 96 73 12 33">+229 01 96 73 12 33</a>
-                </li>
-                <li>
-                    <a href="+229 01 95 24 88 33">+229 01 95 24 88 33</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Votre Site Touristique. Tous droits réservés.</p>
-    </div>
-</footer>

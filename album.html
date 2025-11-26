@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Album Culturel - Dèmondjitour</title>
     <link rel="stylesheet" href="album.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGMSHGQX7Q"></script>
     <script>
@@ -17,10 +18,6 @@
         gtag('config', 'G-HGMSHGQX7Q');
     </script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="description" content="Plongez au cœur de l'Afrique culturelle : traditions, festivals, sites historiques, artisanat et peuples authentiques. ExploreAfrique vous guide à travers les richesses du continent.">
     <meta name="keywords" content="tourisme Afrique, culture africaine, voyage, traditions, artisanat, festivals, patrimoine">
     <meta name="author" content="ExploreAfrique">
@@ -32,7 +29,8 @@
     <meta property="og:url" content="https://exploreafrique.com">
     <meta property="og:type" content="website">
 
-   
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -44,8 +42,7 @@
         <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="Apropos.html">A Propos</a></li>
-            <li><a href="gallerie.html">Galerie</a>
-            </li>
+            <li><a href="gallerie.html">Galerie</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -63,95 +60,84 @@
         </div>
     </div>
 
-    <h1>Nos Destinations Phares</h1>
-
-    <div class="contact-grid">
-        <div class="contact-item">
-            <img src="ChatGPT Image 14 oct. 2025, 12_57_12.png" alt="">
-            <div class="opacity">
-                <a href="mauritanie.html">Découvrir</a>
-            </div>
-          
+    <!-- SECTION DESTINATIONS PHARES AVEC CARROUSEL HORIZONTAL -->
+    <section class="destinations-section">
+        <div class="section-header">
+            <h2>Nos Destinations Phares</h2>
+            <p>Explorez les merveilles culturelles de l'Afrique à travers nos destinations sélectionnées</p>
         </div>
 
-        <div class="contact-item">
-            <img src="c:\Users\FANOUDAN Spéra\Downloads\cdd09c10-13f8-416b-984e-ff9b52b736ab.jpg" alt="">
-            <div class="opacity">
-              pdddddddddddddd
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Les éléments du carrousel seront générés par JavaScript -->
             </div>
             
-        </div>
-        
-    </div>
-
-    <div class="contact-grid">
-        <div class="contact-item">
-            <img src="ChatGPT Image 15 oct. 2025, 00_05_52.png" alt="">
-            <div class="opacity">
-                <a href="mauritanie.html">Découvrir</a>
-            </div>
-          
-        </div>
-
-        <div class="contact-item">
-          <img src="ChatGPT Image 15 oct. 2025, 00_11_46.png" alt="">
-            <div class="opacity">
-              pdddddddddddddd
+            <div class="carousel-nav">
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
             
-        </div>
-        
-    </div>
-    <div class="contact-grid">
-        <div class="contact-item">
-            <img src="ChatGPT Image 17 oct. 2025, 08_31_43.png" alt="">
-            <div class="opacity">
-                <a href="mauritanie.html">Découvrir</a>
+            <div class="carousel-indicators" id="indicators">
+                <!-- Les indicateurs seront générés par JavaScript -->
             </div>
-          
+        </div>
+    </section>
+
+    <!-- SECTION GALERIE D'IMAGES -->
+    <section class="gallery-section">
+        <div class="section-header">
+            <h2>Galerie Culturelle</h2>
+            <p>Immortalisation des moments magiques à travers l'objectif</p>
         </div>
 
-        <div class="contact-item">
-            <img src="c:\Users\FANOUDAN Spéra\Downloads\cdd09c10-13f8-416b-984e-ff9b52b736ab.jpg" alt="">
-            <div class="opacity">
-              pdddddddddddddd
+        <div class="gallery-carousel">
+            <div class="gallery-track" id="galleryTrack">
+                <!-- Les éléments de la galerie seront générés par JavaScript -->
             </div>
             
-        </div>
-        
-    </div>
-    <div class="contact-grid">
-        <div class="contact-item">
-            <img src="ChatGPT Image 14 oct. 2025, 12_57_12.png" alt="">
-            <div class="opacity">
-                <a href="mauritanie.html">Découvrir</a>
+            <div class="gallery-nav">
+                <button class="nav-btn gallery-prev" id="galleryPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn gallery-next" id="galleryNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-          
+        </div>
+    </section>
+
+    <!-- SECTION TEMOIGNAGES -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <h2>Ils ont découvert l'Afrique avec nous</h2>
+            <p>Expériences authentiques, souvenirs inoubliables</p>
         </div>
 
-        <div class="contact-item">
-            <img src="c:\Users\FANOUDAN Spéra\Downloads\cdd09c10-13f8-416b-984e-ff9b52b736ab.jpg" alt="">
-            <div class="opacity">
-              pdddddddddddddd
+        <div class="testimonials-carousel">
+            <div class="testimonials-track" id="testimonialsTrack">
+                <!-- Les témoignages seront générés par JavaScript -->
             </div>
             
+            <div class="testimonials-nav">
+                <button class="nav-btn testimonials-prev" id="testimonialsPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn testimonials-next" id="testimonialsNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
-        
-    </div>
-    <!-- TEXTE DE PRÉSENTATION POUR LE DEUXIÈME CONTENEUR -->
-    <div class="album-presentation" style="margin-top: 40px;">
-        <h2>L'Art de Voyager Autrement</h2>
-        <div class="subtitle">Des expériences authentiques, des souvenirs éternels</div>
-        <div class="description">
-            Au-delà des sentiers battus, nous vous proposons une immersion totale dans l'âme africaine. 
-            De l'architecture millénaire aux rythmes envoûtants, des marchés colorés aux savanes infinies, 
-            chaque album est une porte ouverte sur l'authenticité. Laissez-vous guider par la passion 
-            et l'expertise de Dèmondjitour pour vivre l'Afrique comme vous ne l'avez jamais imaginée.
-        </div>
-    </div>
+    </section>
 
     <nav class="navsav">
-        <a href="gallerie suite.html">Savoir plus</a><br><br><br>
+        <a href="album suite.html" class="video-link">
+            <i class="fas fa-play-circle"></i>
+            Découvrir nos vidéos
+        </a>
     </nav>
 
     <footer>
@@ -168,17 +154,17 @@
             <div class="footer-social">
                 <h3>Suivez-nous</h3>
                 <ul>
-                    <li><a href="https://facebook.com">Facebook</a></li>
-                    <li><a href="https://t.me/demondjitourBenin">Télégram</a></li>
-                    <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag">Instagram</a></li>
+                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://t.me/demondjitourBenin"><i class="fab fa-telegram"></i> Télégram</a></li>
+                    <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i> Instagram</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h3>Contact</h3>
                 <ul>
-                    <li><a href="mailto:demondjil@gmail.com">Email : demondjil@gmail.com</a></li>
-                    <li><a href="tel:+2290196731233">+229 01 96 73 12 33</a></li>
-                    <li><a href="tel:+2290195248833">+229 01 95 24 88 33</a></li>
+                    <li><a href="mailto:demondjil@gmail.com"><i class="fas fa-envelope"></i> demondjil@gmail.com</a></li>
+                    <li><a href="tel:+2290196731233"><i class="fas fa-phone"></i> +229 01 96 73 12 33</a></li>
+                    <li><a href="tel:+2290195248833"><i class="fas fa-phone"></i> +229 01 95 24 88 33</a></li>
                 </ul>
             </div>
         </div>
@@ -186,6 +172,8 @@
             <p>&copy; 2025 Dèmondjitour. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <script src="album.js"></script>
 </body>
 
 </html>

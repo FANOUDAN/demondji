@@ -1,193 +1,846 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HGMSHGQX7Q"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-HGMSHGQX7Q');
-</script>
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contact.css">
+    <title>Dèmondjitour - Contact</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGMSHGQX7Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-HGMSHGQX7Q');
+    </script>
 
-
-    <meta name="description"
-        content="Plongez au cœur de l'Afrique culturelle : traditions, festivals, sites historiques, artisanat et peuples authentiques. ExploreAfrique vous guide à travers les richesses du continent.">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO complémentaires -->
-    <meta name="keywords"
-        content="tourisme Afrique, culture africaine, voyage, traditions, artisanat, festivals, patrimoine">
-    <meta name="author" content="ExploreAfrique">
+    <!-- Métadonnées SEO -->
+    <meta name="description" content="Contactez Dèmondjitour pour organiser votre voyage culturel en Afrique. Notre équipe vous accompagne dans la découverte des trésors du continent.">
+    <meta name="keywords" content="contact Dèmondjitour, voyage Afrique, tourisme culturel, agence voyage Bénin, destinations africaines">
+    <meta name="author" content="Dèmondjitour">
 
     <!-- Open Graph pour les réseaux sociaux -->
-    <meta property="og:title" content="ExploreAfrique - Le tourisme culturel en Afrique">
-    <meta property="og:description"
-        content="Découvrez les trésors culturels africains : musiques, arts, traditions, et peuples fascinants.">
-    <meta property="og:image" content="https://exploreafrique.com/assets/images/og-preview.jpg">
-    <meta property="og:url" content="https://exploreafrique.com">
+    <meta property="og:title" content="Contact - Dèmondjitour - Voyages Culturels en Afrique">
+    <meta property="og:description" content="Contactez notre équipe pour organiser votre voyage authentique à travers l'Afrique et ses richesses culturelles.">
+    <meta property="og:image" content="https://exploreafrique.com/assets/images/og-contact.jpg">
+    <meta property="og:url" content="https://exploreafrique.com/contact">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card (optionnel) -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ExploreAfrique - Tourisme culturel africain">
-    <meta name="twitter:description"
-        content="ExploreAfrique vous emmène au cœur des traditions africaines, entre nature, histoire et rencontres humaines.">
-    <meta name="twitter:image" content="https://exploreafrique.com/assets/images/og-preview.jpg">
+    <meta name="twitter:title" content="Contact - Dèmondjitour">
+    <meta name="twitter:description" content="Organisez votre voyage culturel en Afrique avec l'expertise de Dèmondjitour.">
+    <meta name="twitter:image" content="https://exploreafrique.com/assets/images/og-contact.jpg">
 
-    <link rel="canonical" href="https://exploreafrique.com">
+    <link rel="canonical" href="https://exploreafrique.com/contact">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #e67e22;
+            --secondary-color: #2c3e50;
+            --accent-color: #d35400;
+            --light-color: #f8f9fa;
+            --dark-color: #333;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('afrique%20carte.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInDown 1s ease-out forwards;
+        }
+
+        @keyframes fadeInDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: var(--transition);
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .menu-hover {
+            position: relative;
+        }
+
+        .sousmenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .menu-hover:hover .sousmenu {
+            display: block;
+        }
+
+        .sousmenu li a {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 0;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .contact-item {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-header {
+            background: var(--secondary-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-header p {
+            opacity: 0.8;
+        }
+
+        .contact-body {
+            padding: 2rem;
+        }
+
+        /* Contact Methods */
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--light-color);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .contact-method:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            margin-bottom: 0.25rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-details a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 2rem;
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+        }
+
+        .map-section h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--light-color);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+        }
+
+        .form-control.error {
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+            padding-right: 45px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #27ae60;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 3rem 0 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-links h3,
+        .footer-social h3,
+        .footer-contact h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        footer ul li a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                padding: 1rem 0;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            #menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1rem;
+            }
+
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .navbar h1 {
+                font-size: 1.5rem;
+            }
+
+            .page-header {
+                padding: 3rem 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-body {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-item:first-child {
+            animation: slideIn 0.6s ease-out 0.1s both;
+        }
+
+        .contact-item:last-child {
+            animation: slideIn 0.6s ease-out 0.2s both;
+        }
+
+        /* Additional Features */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1>Dèmondjitour</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
 
-</body>
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À Propos</a></li>
+            <li class="menu-hover">
+                <a href="gallerie.html">Galerie</a>
+                <ul class="sousmenu">
+                    <li><a href="album.html">Album</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
 
-</html>
+    <!-- Header -->
+    <header class="page-header">
+        <h1>Contactez-Nous</h1>
+        <p>Notre équipe est à votre écoute pour organiser votre voyage culturel unique en Afrique</p>
+    </header>
 
-<nav class="navbar">
-    <h1>Dèmondjitour</h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
-
-    <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="Apropos.html">A Propos</a></li>
-       
-            <ul class="menu">
-                <li class="menu-hover">
-                    <a href="gallerie.html">Galerie ▼</a>
-                    <ul class="sousmenu">
-                        <li><a href="album.html">Album</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-        </li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-
-    </ul>
-
-
-</nav>
-<h1>Nos contact</h1>
-<div class="contact-grid">
-    <div class="contact-item">
-
-        <img src=""
-            alt="téléphone">
-
-
-        <p><a href="+229 01 96 73 12 33">+229 01 96 73 12 33</a></p> &
-        <p><a href="+229 01 95 24 88 33">+229 01 95 24 88 33</a></p> <br><br>
-        <img src="https://th.bing.com/th/id/OIP.bx7tlcUgw22xOpbwxMS3KAHaHa?w=201&h=201&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
-            alt="Email">
-        <p><a href="demondjil@gmail.com">demondjil@gmail.com</a></p> <br>
-
-
-
+    <!-- Contact Grid -->
+    <div class="contact-grid">
+        <!-- Informations de contact -->
         <div class="contact-item">
-            <h3>Localisation exacte de Dotou (Dahè, Houéyogbé)</h3>
-            <p>📍 Dotou, Arrondissement de Dahè, Commune de Houéyogbé, Bénin</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30473.262379958243!2d1.8895081780904504!3d6.521477146413465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zZGFow6g!5e1!3m2!1sfr!2sbj!4v1752435290057!5m2!1sfr!2sbj"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </small>
-            </p>
+            <div class="contact-header">
+                <h3><i class="fas fa-headset"></i> Informations de Contact</h3>
+                <p>Nous sommes disponibles pour répondre à vos questions</p>
+            </div>
+            <div class="contact-body">
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:+2290196731233">+229 01 96 73 12 33</a></p>
+                            <p><a href="tel:+2290195248833">+229 01 95 24 88 33</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:demondjil@gmail.com">demondjil@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Heures d'ouverture</h4>
+                            <p>Lundi - Vendredi: 8h00 - 18h00</p>
+                            <p>Samedi: 9h00 - 16h00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <h4><i class="fas fa-map-marker-alt"></i> Notre Localisation</h4>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30473.262379958243!2d1.8895081780904504!3d6.521477146413465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zdGFow6g!5e1!3m2!1sfr!2sbj!4v1752435290057!5m2!1sfr!2sbj"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Localisation de Dotou, Dahè">
+                        </iframe>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; color: var(--text-light);">
+                        Dotou, Arrondissement de Dahè, Commune de Houéyogbé, Bénin
+                    </p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://facebook.com" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://t.me/demondjitourBenin" class="social-link" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/2290196731233" class="social-link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
+        <!-- Formulaire de contact -->
+        <div class="contact-item">
+            <div class="contact-header">
+                <h3><i class="fas fa-paper-plane"></i> Demande de Devis</h3>
+                <p>Remplissez ce formulaire pour un voyage personnalisé</p>
+            </div>
+            <div class="contact-body">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom complet" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
 
-    </div>
-    <div class="contact-item">
-        <div class="container">
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom complet*</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required>
-                    <span class="error-message" id="name-error"></span>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="votre@email.com" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Adresse email*</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="votre@email.com"
-                        required>
-                    <span class="error-message" id="email-error"></span>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Votre numéro de téléphone" required>
+                        <span class="error-message" id="phone-error"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="phone">Téléphone*</label>
-                    <input type="tel" id="phone" name="phone" class="form-control"
-                        placeholder="Votre numéro de téléphone" required>
-                    <span class="error-message" id="phone-error"></span>
-                </div>
+                    <div class="form-group">
+                        <label for="destination">Destination souhaitée *</label>
+                        <select id="destination" name="destination" class="form-control" required>
+                            <option value="">-- Sélectionnez une destination --</option>
+                            <option value="benin">Bénin</option>
+                            <option value="togo">Togo</option>
+                            <option value="cote-ivoire">Côte d'Ivoire</option>
+                            <option value="senegal">Sénégal</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="niger">Niger</option>
+                            <option value="mali">Mali</option>
+                            <option value="burkina">Burkina Faso</option>
+                            <option value="cameroun">Cameroun</option>
+                            <option value="gabon">Gabon</option>
+                            <option value="rdc">République Démocratique du Congo</option>
+                            <option value="afrique-sud">Afrique du Sud</option>
+                            <option value="maroc">Maroc</option>
+                            <option value="tunisie">Tunisie</option>
+                            <option value="algerie">Algérie</option>
+                            <option value="europe">Europe</option>
+                            <option value="asie">Asie</option>
+                            <option value="amerique">Amérique</option>
+                            <option value="autres">Autres destinations</option>
+                        </select>
+                        <span class="error-message" id="destination-error"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="destination">Destination souhaitée*</label>
-                    <select id="destination" name="destination" class="form-control" required>
-                        <option value="">-- Sélectionnez une destination --</option>
-                        <option value="benin">Bénin</option>
-                        <option value="togo">Togo</option>
-                        <option value="cote-ivoire">Côte d'Ivoire</option>
-                        <option value="senegal">Sénégal</option>
-                        <option value="ghana">Ghana</option>
-                        <option value="niger">Niger</option>
-                        <option value="mali">Mali</option>
-                        <option value="burkina">Burkina Faso</option>
-                        <option value="cameroun">Cameroun</option>
-                        <option value="gabon">Gabon</option>
-                        <option value="rdc">République Démocratique du Congo</option>
-                        <option value="afrique-sud">Afrique du Sud</option>
-                        <option value="maroc">Maroc</option>
-                        <option value="tunisie">Tunisie</option>
-                        <option value="algerie">Algérie</option>
-                        <option value="europe">Europe</option>
-                        <option value="asie">Asie</option>
-                        <option value="amerique">Amérique</option>
-                        <option value="autres">Autres destinations</option>
-                    </select>
-                    <!-- autres options -->
+                    <div class="form-group">
+                        <label for="travelers">Nombre de voyageurs</label>
+                        <select id="travelers" name="travelers" class="form-control">
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3-5">3-5 personnes</option>
+                            <option value="6-10">6-10 personnes</option>
+                            <option value="10+">Plus de 10 personnes</option>
+                        </select>
+                    </div>
 
-                    <span class="error-message" id="destination-error"></span>
-                </div>
+                    <div class="form-group">
+                        <label for="date">Dates de voyage souhaitées</label>
+                        <input type="text" id="date" name="date" class="form-control" placeholder="JJ/MM/AAAA - JJ/MM/AAAA">
+                    </div>
 
-                <div class="form-group">
-                    <label for="date">Dates de voyage souhaitées</label>
-                    <input type="text" id="date" name="date" class="form-control" placeholder="JJ/MM/AAAA - JJ/MM/AAAA">
-                </div>
+                    <div class="form-group">
+                        <label for="budget">Budget approximatif (par personne)</label>
+                        <select id="budget" name="budget" class="form-control">
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="economique">Économique (moins de 500€)</option>
+                            <option value="moyen">Moyen (500€ - 1500€)</option>
+                            <option value="confort">Confort (1500€ - 3000€)</option>
+                            <option value="luxe">Luxe (plus de 3000€)</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Votre message*</label>
-                    <textarea id="message" name="message" class="form-control"
-                        placeholder="Décrivez-nous votre projet de voyage..." required></textarea>
-                    <span class="error-message" id="message-error"></span>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Décrivez-nous votre projet de voyage, vos intérêts culturels, vos attentes..." required></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
 
-                <a href="#" id="telegramLink" class="submit-btn">Envoyer votre demande</a>
-            </form>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer votre demande
+                    </button>
+
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i> Votre message a été envoyé avec succès!
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2290196731233" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Apropos.html">À Propos</a></li>
+                    <li><a href="gallerie.html">Galerie</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://t.me/demondjitourBenin"><i class="fab fa-telegram"></i> Télégram</a></li>
+                    <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:demondjil@gmail.com"><i class="fas fa-envelope"></i> demondjil@gmail.com</a></li>
+                    <li><a href="tel:+2290196731233"><i class="fas fa-phone"></i> +229 01 96 73 12 33</a></li>
+                    <li><a href="tel:+2290195248833"><i class="fas fa-phone"></i> +229 01 95 24 88 33</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dèmondjitour. Tous droits réservés.</p>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('contactForm');
-            const telegramLink = document.getElementById('telegramLink');
+            const successMessage = document.getElementById('successMessage');
 
-            telegramLink.addEventListener('click', function (e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
 
                 let isValid = true;
                 const requiredFields = form.querySelectorAll('[required]');
 
-                // Valider chaque champ requis
+                // Reset errors
+                document.querySelectorAll('.error-message').forEach(el => {
+                    el.textContent = '';
+                });
+                document.querySelectorAll('.form-control').forEach(el => {
+                    el.classList.remove('error');
+                });
+
+                // Validate required fields
                 requiredFields.forEach(field => {
                     if (!field.value.trim()) {
                         isValid = false;
@@ -197,161 +850,79 @@
                             errorElement.textContent = 'Ce champ est obligatoire';
                         }
                         field.classList.add('error');
-                    } else {
-                        const errorId = field.id + '-error';
-                        const errorElement = document.getElementById(errorId);
-                        if (errorElement) {
-                            errorElement.textContent = '';
-                        }
-                        field.classList.remove('error');
                     }
                 });
 
-                // Validation spécifique pour l'email
+                // Validate email format
                 const emailField = document.getElementById('email');
-                if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+                if (emailField && emailField.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
                     isValid = false;
                     document.getElementById('email-error').textContent = 'Veuillez entrer une adresse email valide';
                     emailField.classList.add('error');
                 }
 
                 if (isValid) {
-                    // Récupérer les valeurs du formulaire
+                    // Get form values
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const phone = document.getElementById('phone').value;
                     const destination = document.getElementById('destination').value;
+                    const travelers = document.getElementById('travelers').value;
                     const date = document.getElementById('date').value;
+                    const budget = document.getElementById('budget').value;
                     const message = document.getElementById('message').value;
 
-                    // Créer le message pour Telegram
+                    // Create Telegram message
                     const telegramMessage = `Nouvelle demande de contact:%0A%0A` +
                         `Nom: ${encodeURIComponent(name)}%0A` +
                         `Email: ${encodeURIComponent(email)}%0A` +
                         `Téléphone: ${encodeURIComponent(phone)}%0A` +
                         `Destination: ${encodeURIComponent(destination)}%0A` +
+                        `Voyageurs: ${encodeURIComponent(travelers)}%0A` +
                         `Dates: ${encodeURIComponent(date)}%0A` +
+                        `Budget: ${encodeURIComponent(budget)}%0A` +
                         `Message: ${encodeURIComponent(message)}`;
 
-                    // Ouvrir le lien Telegram avec le message pré-rempli
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+
+                    // Open Telegram with pre-filled message
                     window.open(`https://t.me/demondjitourBenin?text=${telegramMessage}`, '_blank');
                 }
             });
+
+            // Add real-time validation
+            document.querySelectorAll('.form-control').forEach(field => {
+                field.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        const errorId = this.id + '-error';
+                        const errorElement = document.getElementById(errorId);
+                        if (errorElement) {
+                            errorElement.textContent = 'Ce champ est obligatoire';
+                        }
+                        this.classList.add('error');
+                    } else if (this.id === 'email' && this.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value.trim())) {
+                        document.getElementById('email-error').textContent = 'Veuillez entrer une adresse email valide';
+                        this.classList.add('error');
+                    } else {
+                        const errorId = this.id + '-error';
+                        const errorElement = document.getElementById(errorId);
+                        if (errorElement) {
+                            errorElement.textContent = '';
+                        }
+                        this.classList.remove('error');
+                    }
+                });
+            });
         });
     </script>
-
-    <style>
-        .error {
-            border-color: #ff0000 !important;
-        }
-
-        .error-message {
-            color: #ff0000;
-            font-size: 0.8em;
-            display: block;
-            margin-top: 5px;
-        }
-
-        .submit-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0088cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            background-color: #006699;
-        }
-    </style>
-
-    </form>
-</div>
-</div>
-
-<style>
-    .error-message {
-        color: #e74c3c;
-        font-size: 0.8em;
-        display: none;
-    }
-
-    .form-control.error {
-        border-color: #e74c3c;
-    }
-
-    .submit-btn {
-        background-color: beige;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1em;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: background-color 0.3s;
-    }
-
-    .submit-btn:hover {
-        background-color: bisque;
-    }
-
-    .submit-btn i {
-        font-size: 1.2em;
-    }
-</style>
-
-
-
-</div>
-</div>
-
-
-
-
-</div>
-<br>
-<footer>
-    <div class="footer-container ">
-        <div class="footer-links ">
-            <h3>Liens Utiles</h3>
-            <ul>
-                <li><a href="#destinations ">Destinations</a></li>
-                <li><a href="#experiences ">Expériences</a></li>
-                <li><a href="#contact ">Contact</a></li>
-                <li><a href="#blog ">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-social ">
-            <h3>Suivez-nous</h3>
-            <ul>
-                <li><a href="https://facebook.com ">Facebook</a></li>
-                <li><a href="https://t.me/demondjitourBenin">Télégram</a></li>
-                <li><a href="https://www.instagram.com/leoncebienvenufe/?utm_source=qr&r=nametag  ">Instagram</a></li>
-            </ul>
-        </div>
-        <div class="footer-contact ">
-            <h3>Contact</h3>
-            <ul>
-                <li><a href="Email : demondjil@gmail.com ">Email : demondjil@gmail.com</a></li>
-                <li>
-                    <a href="+229 01 96 73 12 33 ">+229 01 96 73 12 33</a>
-                </li>
-                <li>
-                    <a href="+229 01 95 24 88 33 ">+229 01 95 24 88 33</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom ">
-        <p>&copy; 2025 Votre Site Touristique. Tous droits réservés.</p>
-    </div>
-</footer>
-
 </body>
-
 </html>
